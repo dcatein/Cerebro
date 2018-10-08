@@ -30,7 +30,7 @@ return [
     ],
 
     'stripe' => [
-        'model' => Cerebro\User::class,
+        'model' => cerebro\User::class,
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],

@@ -1,6 +1,6 @@
 <?php
 
-namespace Cerebro\Http\Middleware;
+namespace cerebro\Http\Middleware;
 
 use Illuminate\Foundation\Http\Middleware\TrimStrings as Middleware;
 
