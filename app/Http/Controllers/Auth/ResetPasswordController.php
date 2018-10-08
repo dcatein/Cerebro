@@ -1,8 +1,8 @@
 <?php
 
-namespace Cerebro\Http\Controllers\Auth;
+namespace cerebro\Http\Controllers\Auth;
 
-use Cerebro\Http\Controllers\Controller;
+use cerebro\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 
 class ResetPasswordController extends Controller

@@ -1,6 +1,6 @@
 <?php
 
-namespace Cerebro\Http\Controllers\Auth;
+namespace cerebro\Http\Controllers\Auth;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;

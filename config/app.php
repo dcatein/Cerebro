@@ -154,11 +154,11 @@ return [
         /*
          * Application Service Providers...
          */
-        Cerebro\Providers\AppServiceProvider::class,
-        Cerebro\Providers\AuthServiceProvider::class,
-        // Cerebro\Providers\BroadcastServiceProvider::class,
-        Cerebro\Providers\EventServiceProvider::class,
-        Cerebro\Providers\RouteServiceProvider::class,
+        cerebro\Providers\AppServiceProvider::class,
+        cerebro\Providers\AuthServiceProvider::class,
+        // cerebro\Providers\BroadcastServiceProvider::class,
+        cerebro\Providers\EventServiceProvider::class,
+        cerebro\Providers\RouteServiceProvider::class,
 
     ],
 

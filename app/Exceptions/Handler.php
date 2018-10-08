@@ -1,6 +1,6 @@
 <?php
 
-namespace Cerebro\Exceptions;
+namespace cerebro\Exceptions;
 
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;

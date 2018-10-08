@@ -1,6 +1,6 @@
 <?php
 
-namespace Cerebro\Providers;
+namespace cerebro\Providers;
 
 use Illuminate\Support\Facades\Event;
 use Illuminate\Auth\Events\Registered;

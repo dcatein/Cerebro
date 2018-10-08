@@ -1,6 +1,6 @@
 <?php
 
-namespace Cerebro\Http\Middleware;
+namespace cerebro\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;
