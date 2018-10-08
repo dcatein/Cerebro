@@ -1,9 +1,9 @@
 <?php
 
-namespace Cerebro\Http\Controllers\Auth;
+namespace cerebro\Http\Controllers\Auth;
 
-use Cerebro\User;
-use Cerebro\Http\Controllers\Controller;
+use cerebro\User;
+use cerebro\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -59,7 +59,7 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \Cerebro\User
+     * @return \cerebro\User
      */
     protected function create(array $data)
     {

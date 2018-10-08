@@ -67,7 +67,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => Cerebro\User::class,
+            'model' => cerebro\User::class,
         ],
 
         // 'users' => [
