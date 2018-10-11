@@ -8,7 +8,6 @@
 
 <title>Projeto Cerebro</title>
 
-
 <!-- Bootstrap CSS -->
 <link rel="icon" type="imagem/png" href="favicon.png" />
 

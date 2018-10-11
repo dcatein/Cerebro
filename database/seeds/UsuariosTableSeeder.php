@@ -17,7 +17,6 @@ class UsuariosTableSeeder extends Seeder
             'email' => 'davidson@gmail.com',
             'senha' => 'dav',
             'idade' => '25',
-            'tipo' => '0',
             'created_at' => now()
         ]);
 
@@ -27,7 +26,6 @@ class UsuariosTableSeeder extends Seeder
             'email' => 'giovanna@gmail.com',
             'senha' => 'gio',
             'idade' => '22',
-            'tipo' => '1',
             'created_at' => now()
         ]);
 
@@ -37,7 +35,6 @@ class UsuariosTableSeeder extends Seeder
             'email' => 'glaziele@gmail.com',
             'senha' => 'gla',
             'idade' => '30',
-            'tipo' => '2',
             'created_at' => now()
         ]);
 
@@ -47,7 +44,6 @@ class UsuariosTableSeeder extends Seeder
             'email' => 'rayssa@gmail.com',
             'senha' => 'ray',
             'idade' => '22',
-            'tipo' => '0',
             'created_at' => now()
         ]);
 
@@ -57,7 +53,6 @@ class UsuariosTableSeeder extends Seeder
             'email' => 'natan@gmail.com',
             'senha' => 'nat',
             'idade' => '24',
-            'tipo' => '1',
             'created_at' => now()
         ]);
 
@@ -67,7 +62,6 @@ class UsuariosTableSeeder extends Seeder
             'email' => 'vinicius@gmail.com',
             'senha' => 'vin',
             'idade' => '24',
-            'tipo' => '2',
             'created_at' => now()
         ]);
     }

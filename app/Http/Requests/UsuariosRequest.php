@@ -25,7 +25,7 @@ class UsuariosRequest extends FormRequest
     {
         return [
             'nome' => 'required|max:250',
-            'email' => 'required|max:250',
+            'email' => 'required|max:250|unique:usuarios',
             'senha' => 'required|max:250'
         ];
     }
@@ -34,6 +34,7 @@ class UsuariosRequest extends FormRequest
     {
     return [
         'required' => 'O campo :attribute não pode ser vazio.',
+        'email.unique' => 'Email já cadastrado'
     ];
     }
 }

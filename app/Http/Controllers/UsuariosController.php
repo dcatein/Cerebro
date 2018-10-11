@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\DB;
 use Request;
 use cerebro\Usuarios;
 use cerebro\Http\Requests\UsuariosRequest;
+use cerebro\Http\Controllers\ConvitesController;
 
 class UsuariosController extends Controller{
     
@@ -15,8 +16,12 @@ class UsuariosController extends Controller{
     }
 
     public function find($id){
-        $reposta = Usuarios::find($id);
+        $reposta = $this->findUsuario($id);
 
+        if(Request::input('conviteRespota')){
+            dd('aaa');
+        }
+        
         if (empty($reposta)){
             return 'Dado inexistente';
         }
@@ -39,13 +44,14 @@ class UsuariosController extends Controller{
     }
 
     public function update($id){
+        // $usuario = new Usuarios();
+
         Usuarios::where('id',$id)
         ->update([
             'nome' => Request::input('nome'),
             'email' => Request::input('email'),
             'idade' => Request::input('idade'),
-            'senha' => Request::input('senha'),
-            'tipo' => Request::input('tipo')
+            'senha' => Request::input('senha')
             ]);
 
         return redirect()->action('UsuariosController@index');
@@ -54,5 +60,17 @@ class UsuariosController extends Controller{
     public function alterar($id){
         $usuario = Usuarios::find($id);
         return view('usuarios.form_update')->with('usuario', $usuario);
+    }
+
+    public function buscarConvites($email){
+        $convite = new ConvitesController();
+        return $convite->findByEmail($email);
+    }
+
+    public function findUsuario($id){
+        $reposta = Usuarios::find($id);
+        $reposta->convites = $this->buscarConvites($reposta->email);
+
+        return $reposta;
     }
 }

@@ -17,15 +17,6 @@
         <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
         
         <div class="form-group">
-            <label>Tipo</label>
-            <select class="custom-select" name="tipo">
-                <option value='0'>Aluno</option>
-                <option value='1'>Professor</option>
-                <option value='2'>Administrador</option>
-            </select>
-        </div>
-
-        <div class="form-group">
             <label>Nome</label>
             <input name="nome" class="form-control"/>
         </div>
