@@ -8,7 +8,7 @@
 
 
 
-<title>Album example for Bootstrap</title>
+<title>Projeto Cerebro</title>
 
 
 

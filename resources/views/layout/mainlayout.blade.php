@@ -5,23 +5,22 @@
 <html lang="en">
 
    <head>
-
+     <link href="/css/app.css" rel="stylesheet">
      @include('layout.partials.head')
 
    </head>
 
    <body>
+    <div class='container'>
+      @include('layout.partials.nav')
 
-    @include('layout.partials.nav')
+      @include('layout.partials.header')
 
-    @include('layout.partials.header')
+      @yield('content')
 
-    @yield('content')
+      @include('layout.partials.footer')
 
-    @include('layout.partials.footer')
-
-    @include('layout.partials.footer-scripts')
-
+    </div>
    </body>
 
 </html>
