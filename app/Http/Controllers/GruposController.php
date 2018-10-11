@@ -10,7 +10,7 @@ class GruposController extends Controller{
     
     public function index(){
         $grupos = Grupos::all();
-        return view('grupo')->with('grupos', $grupos);
+        return view('grupos.index')->with('grupos', $grupos);
     }
 
     public function find($id){
@@ -50,5 +50,14 @@ class GruposController extends Controller{
     public function alterar($id){
         $grupo = Grupos::find($id);
         return view('grupos.form_update')->with('grupo', $grupo);
+    }
+
+    public function convidarUsuario($id){
+        $grupo = Grupos::find($id);
+        return view('convites.form')->with('grupo',$grupo);
+    }
+
+    public function findById($id){
+        return Grupos::find($id);
     }
 }

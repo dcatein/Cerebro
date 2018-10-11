@@ -13,7 +13,7 @@
             @foreach ($usuarios as $usuario)
             <tr>
                 <td>{{$usuario->nome}}</td>
-                <td>{{$usuario->login}}</td>
+                <td>{{$usuario->email}}</td>
                 <td>
                     <a href="{{action('UsuariosController@find',$usuario->id)}}">
                         detalhes
