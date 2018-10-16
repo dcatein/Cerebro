@@ -20,6 +20,7 @@ class CreateUsuariosTable extends Migration
             $table->char('nome')->nullable();
             $table->char('senha')->nullable();
             $table->integer('idade')->nullable();
+            $table->integer('tipo')->nullable()->comment('0 - Aluno; 1 - Professor; 2 - Adm');
         });
     }
 

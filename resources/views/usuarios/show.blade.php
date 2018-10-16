@@ -8,6 +8,24 @@
             <li>
                 {{$usuario->email}}
             </li>
+            <li>
+            @switch($usuario->tipo)
+                @case(0)
+                    Aluno
+                    @break
+
+                @case(1)
+                    Professor
+                    @break
+
+                @case(2)    
+                    Administrador
+                    @break
+
+                @default
+                    Tipo Incorreto
+            @endswitch
+            </li>
         </ul>
 
         <a href="{{action('UsuariosController@alterar',$usuario->id)}}">
