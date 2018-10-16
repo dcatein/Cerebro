@@ -45,7 +45,8 @@ class UsuariosController extends Controller{
             'nome' => Request::input('nome'),
             'email' => Request::input('email'),
             'idade' => Request::input('idade'),
-            'senha' => Request::input('senha')
+            'senha' => Request::input('senha'),
+            'tipo' => Request::input('tipo')
             ]);
 
         return redirect()->action('UsuariosController@index');
