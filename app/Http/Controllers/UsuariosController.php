@@ -38,8 +38,6 @@ class UsuariosController extends Controller{
     }
 
     public function update($id){
-        // $usuario = new Usuarios();
-
         Usuarios::where('id',$id)
         ->update([
             'nome' => Request::input('nome'),

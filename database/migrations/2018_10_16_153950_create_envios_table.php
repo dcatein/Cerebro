@@ -16,7 +16,7 @@ class CreateEnviosTable extends Migration
         Schema::create('envios', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->char('assunto');
+            $table->string('assunto');
             $table->integer('tipo');
             $table->text('info');
             $table->float('classificacao')->nullable();
@@ -25,7 +25,7 @@ class CreateEnviosTable extends Migration
         Schema::create('palavrasChave', function (Blueprint $table){
             $table->increments('id');
             $table->timestamps();
-            $table->char('palavra');
+            $table->string('palavra');
             $table->integer('envio');
         });
     }
