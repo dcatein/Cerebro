@@ -3,6 +3,16 @@
 
     <h1>Usuários</h1>
 
+    @if (count($errors) > 0)
+        <div class="alert alert-danger">
+            <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+            </ul>
+        </div>
+    @endif
+
     <form action="/usuarios/insert" method="post">
         <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
         

@@ -5,6 +5,7 @@ namespace cerebro\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Request;
 use cerebro\Usuarios;
+use cerebro\Http\Requests\UsuariosRequest;
 
 class UsuariosController extends Controller{
     
@@ -26,8 +27,8 @@ class UsuariosController extends Controller{
         return view('usuarios.form_new');
     }
 
-    public function insert(){
-        Usuarios::create(Request::all());
+    public function insert(UsuariosRequest $request){
+        Usuarios::create($request->all());
         return redirect()->action('UsuariosController@index')
         ->withInput(Request::only('nome'));
     }
