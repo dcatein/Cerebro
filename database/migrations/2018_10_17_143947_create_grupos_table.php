@@ -17,7 +17,7 @@ class CreateGruposTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->string('nome',200);
-            $table->integer('classificacao')->nullable();
+            $table->float('classificacao')->nullable();
         });
     }
 
