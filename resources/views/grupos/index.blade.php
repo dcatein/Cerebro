@@ -24,9 +24,8 @@
                 <td>
                     @if($grupo->classificacao == null)
                         Não possui
-                    @else{
+                    @else
                         {{$grupo->classificacao}}
-                    }
                     @endif
                 </td>
                 <td>
