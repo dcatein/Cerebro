@@ -1,23 +1,31 @@
-<html>
-<head>
-    <link href="/css/app.css" rel="stylesheet">
-    <title>Usuários</title>
-</head>
-<body>
-    <div class="container">
-        <h1>Usuários</h1>
+@extends('layout.mainlayout')
+    @section('content')
+        <div class="row">
+            <p class='h1'>Usuários</p>
+            <a href="{{action('UsuariosController@novo')}}" type="button" class="btn btn-success btn-sm">Novo</a>
+        </div>
+    @if(old('nome'))
+        <div class="alert alert-success">
+            <strong>Usuário adicionado com sucesso</strong>
+        </div>
+    @endif
         <table class="table">
-            <?php foreach ($usuarios as $usuario): ?>
+            @foreach ($usuarios as $usuario)
             <tr>
-                <td><?= $usuario->nome ?></td>
-                <td><?= $usuario->login ?></td>
+                <td>{{$usuario->nome}}</td>
+                <td>{{$usuario->login}}</td>
                 <td>
-                    <a href="usuarios/show/<?= $usuario->id ?>">
-                    detalhes
+                    <a href="{{action('UsuariosController@find',$usuario->id)}}">
+                        detalhes
+                    </a>
+                </td>
+                <td>
+                    <a href="{{action('UsuariosController@delete',$usuario->id)}}">
+                        deletar
+                    </a>
                 </td>
             </tr>
-            <?php endforeach ?>
+            @endforeach
         </table>
-    </div>
-</body>
-</html>
+    @stop
+    
