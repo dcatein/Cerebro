@@ -1,22 +1,34 @@
-<html>
-<head>
-    <link href="/css/app.css" rel="stylesheet">
-    <title>Usuario</title>
-</head>
-<body>
-    <div class="container">
-        <h1><?= $usuario->nome ?></h1>
+@extends('layout.mainlayout')
+    @section('content')
+        <h1>{{$usuario->nome}}</h1>
         <ul>
             <li>
-                <?= $usuario->login ?>
+                {{$usuario->idade}}
             </li>
             <li>
-                <?= $usuario->idade ?>
+                {{$usuario->email}}
             </li>
             <li>
-                <?= $usuario->email ?>
+            @switch($usuario->tipo)
+                @case(0)
+                    Aluno
+                    @break
+
+                @case(1)
+                    Professor
+                    @break
+
+                @case(2)    
+                    Administrador
+                    @break
+
+                @default
+                    Tipo Incorreto
+            @endswitch
             </li>
         </ul>
-    </div>
-</body>
-</html>
+
+        <a href="{{action('UsuariosController@alterar',$usuario->id)}}">
+            Alterar
+        </a>
+    @stop
