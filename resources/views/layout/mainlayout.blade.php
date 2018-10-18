@@ -7,10 +7,12 @@
    <head>
 
      @include('layout.partials.head')
-
+     @section('style')
+         <link href="/css/card.css" rel="stylesheet">
+     @show
    </head>
 
-   <body>
+   <body style="background: url(https://cdn.pixabay.com/photo/2015/02/02/11/08/office-620817_960_720.jpg)">
 
     @include('layout.partials.nav')
 
@@ -19,8 +21,9 @@
     @yield('content')
 
     @include('layout.partials.footer')
-
     @include('layout.partials.footer-scripts')
+
+
 
    </body>
 
