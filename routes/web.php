@@ -1,5 +1,6 @@
 <?php
 
+// Rotas GET
 Route::get('/index', function () {
      return view('index');
  });
@@ -44,4 +45,4 @@ Route::post('/envios/update/{id}', 'EnviosController@update');
 Route::post('/grupos/insert', 'GruposController@insert');
 Route::post('/grupos/update/{id}', 'GruposController@update');
 
-//-----
+//----- 
