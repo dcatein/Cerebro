@@ -1,28 +1,31 @@
 #card{
   background: rgb(61, 147, 111);
-  width: 300px;
+  max-width: 250px;
   height: 150px;
   position: relative;
-  margin: 5px;
+  margin: 5px auto;
   box-shadow: 1px 1px #888888;
+  line-height: 1.4em;
 }
 #card-body{
 color:#fff;
 font-size: 12px;
-margin: 10px 0px 0px 10px;
+margin: 8px 0px 0px 8px;
+padding: 0;
 
 }
 #card-title{
   font-weight: bold;
   color: #fff;
   font-size: 22px;
-  margin: 10px 0px 0px 10px;
+  margin: 8px 0px 0px 8px;
 
 }
 #icon{
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
+  transition: all 0.5s  ease-in-out;
 }
 #card:hover #icon{
   font-size: 30px;
@@ -35,4 +38,11 @@ margin: 10px 0px 0px 10px;
 #ver-mais a{
   text-decoration: none;
   color: #fff;
+}
+
+
+.card-fade{
+  max-width: 500px;
+  max-height: 350px;
+  background-color: red;
 }

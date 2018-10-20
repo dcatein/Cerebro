@@ -1,0 +1,73 @@
+
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700');
+
+body{ font-size: 14px; color: #333; list-style: 26px;font-family: 'Roboto', sans-serif; }
+
+/** ======================  base css ==============================**/
+
+a:hover{ text-decoration: none; }
+/***    left menu ****/
+
+/***********************  SIDEBAR ********************/
+.sidebar{ width:220px;  background-color: rgba(0,0,0,0.6);transition: all 0.5s  ease-in-out;}
+.bg-defoult{background-color: transparent;}
+.sidebar ul{ list-style:none; margin:0px; padding:0px; }
+.sidebar li a,.sidebar li a.collapsed.active{ display:block; padding:10px 12px; color:#fff;border-left:0px solid #dedede;  text-decoration:none}
+.sidebar li a.active{background-color:#000;border-left:5px solid #dedede; transition: all 0.5s  ease-in-out}
+.sidebar li a:hover{background-color:#000 !important;}
+.sidebar li a i{ padding-right:5px;}
+.sidebar li a .nav-label,.sidebar li a .nav-label+span{ transition: all 0.5s  ease-in-out}
+    
+.sidebar.fliph li a .nav-label,.sidebar.fliph li a .nav-label+span{ display:none;transition: all 0.5s  ease-in-out}
+.sidebar.fliph {width: 42px;transition: all 0.5s  ease-in-out;}
+    
+.sidebar.fliph li{ position:relative}
+
+
+.menu-lateral{display: flex;flex-direction: row;position: fixed;left: 0px;}
+    
+.menu-controls{
+        width: 15px;
+        left: 40px;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        }
+
+.fa{color: #fff;}
+
+#btn-left{display: none;}
+.active{display: block;}
+
+.menu-controls:hover {cursor: pointer;border-left: 2px solid #fff;}
+/***********************  SIDEBAR ********************/
+
+
+/***********************  MEUS GRUPOS INDEX  ********************/
+
+.index-meus-grupos{
+	margin-top: 0px;
+	height: 180px;
+}
+
+
+.col-md-4{
+  display: inline-block;
+  margin-left:-10px;
+}
+.col-md-4 img{
+  width:100%;
+  height:auto;
+}
+  
+body .carousel-control-prev-icon,
+body .carousel-control-next-icon{
+  background-color:#000;
+}
+.title{
+	border-bottom: 2px solid #000;
+}
+/***********************  MEUS GRUPOS INDEX  ********************/
