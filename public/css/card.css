@@ -1,10 +1,11 @@
 #card{
   background: rgb(61, 147, 111);
-  width: 300px;
-  height: 150px;
+  width: 280px;
+  height: 130px;
   position: relative;
   margin: 5px;
   box-shadow: 1px 1px #888888;
+  border-radius: 3px;
 }
 #card-body{
 color:#fff;
@@ -23,6 +24,8 @@ margin: 10px 0px 0px 10px;
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
+  transition: all 0.5s  ease-in-out;
+  font-size: 20px;
 }
 #card:hover #icon{
   font-size: 30px;
@@ -35,4 +38,11 @@ margin: 10px 0px 0px 10px;
 #ver-mais a{
   text-decoration: none;
   color: #fff;
+}
+
+
+.card-fade{
+  max-width: 500px;
+  max-height: 350px;
+  background-color: red;
 }

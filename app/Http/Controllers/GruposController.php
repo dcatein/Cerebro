@@ -10,7 +10,7 @@ class GruposController extends Controller{
     
     public function index(){
         $grupos = Grupos::all();
-        return view('grupos/index')->with('grupos', $grupos);
+        return view('grupo')->with('grupos', $grupos);
     }
 
     public function find($id){
