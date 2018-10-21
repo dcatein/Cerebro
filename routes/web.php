@@ -1,13 +1,12 @@
 <?php
 
 // Rotas GET
-Route::get('/index', function () {
-     return view('index');
- });
 
-Route::get('/', function(){
-    return 'Rota padrão laravel';
-});
+
+	//Index
+Route::get('/index', 'IndexController@index');
+
+
 
     // Usuarios
 Route::get('/usuarios', 'UsuariosController@index');
@@ -24,7 +23,8 @@ Route::get('/envios/delete/{id}', 'EnviosController@delete');
 Route::get('/envios/alterar/{id}', 'EnviosController@alterar');
 
     // Grupos
-Route::get('/grupos', 'GruposController@index');
+Route::get('/grupos', function () {return view('grupo');});
+Route::get('/grupo', 'GruposController@index');
 Route::get('/grupos/show/{id}', 'GruposController@find');
 Route::get('/grupos/novo', 'GruposController@novo');
 Route::get('/grupos/delete/{id}', 'GruposController@delete');

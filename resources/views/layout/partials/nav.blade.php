@@ -6,7 +6,7 @@
                          
           <ul class="list-sidebar bg-defoult">
 
-            <li> ><a href="#" class="button-left"><i class="fa fa-diamond"></i> <span class="nav-label">Cerebro</span>
+            <li> ><a href="#"><i class="fa fa-diamond"></i> <span class="nav-label">Cerebro</span>
             </a> </li>
               <li> <a href="#"> <i class="fa fa-user-circle"></i> <span class="nav-label"> Perfil </span> </a>
             </li>
