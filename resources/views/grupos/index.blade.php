@@ -22,6 +22,7 @@
                 <a href="{{action('GruposController@novo')}}" type="button" class=" fa fa-plus btn btn-sm" title="Novo Grupo"></a>
                 </div>
             </div>
+            </div>
             
             <div class="row">
 
