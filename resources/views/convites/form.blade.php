@@ -5,7 +5,10 @@
     <div class="row justify-content-end ">
         <div class="col-md-12 pl-5" style="display:inline-block">   
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md">
+                   <a href="{{action('GruposController@find',$grupo->id)}}" title="Voltar" class="btn fnt-white"><i class="mt-2 ml-5 fa fa-reply icon-size-15"></i> Voltar</a>
+                </div>
+                <div class="col-md-10">
                     <h2 class="title">Convide para o grupo  {{$grupo->nome}}</h2>
                 </div>
             </div>

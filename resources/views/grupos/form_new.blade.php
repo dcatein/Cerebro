@@ -17,6 +17,13 @@
                             <div class="form-group">
                                 <label>Nome</label>
                                 <input name="nome" class="form-control"/>
+
+                                <label>Categoria</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                  <option>Exatas</option>
+                                  <option>Humanas</option>
+                                  <option>Biológicas</option>
+                                </select>
                             </div>
 
                             <button class="btn btn-primary btn-block" type="Submit">Salvar</button>

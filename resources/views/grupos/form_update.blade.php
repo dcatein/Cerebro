@@ -24,9 +24,27 @@
                                 <label>Nome</label>
                                 <input name="nome" class="form-control" value="{{$grupo->nome}}" type="text"/>
                             </div>
+                            <div class="form-group">
+                                <label>Categoria</label>
+                                <select class="form-control form-control" id="filtro">
+                                    <option>Exatas</option>
+                                    <option>Humanas</option>
+                                    <option>Biológicas</option>
+                                </select>  
+                            </div>
 
                             <button class="btn btn-primary btn-block" type="Submit">Salvar</button>
                         </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="container-group mt-3">
+                        <h4>Componentes</h4>
+                        <div>
+                            lista de componentes
+                        </div>
                     </div>
                 </div>
             </div>

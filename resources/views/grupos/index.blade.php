@@ -12,16 +12,20 @@
                 </div>
                 
                 <div class="col-md-3 pt-2" style="display:inline-block">
-                    <input type="text" placeholder=" Procuro o grupo ..." name="txt-busca">
-                    <a href="" type="button" class="fa fa-search btn btn-sm"></a>
+                    <input type="text"  class="form-control form-control-sm" placeholder=" Procuro o grupo ..." name="txt-busca">
                 </div>
                 <div class="col-md-3 pt-2" style="display:inline-block">
-                    <input type="text" name="txt-filtro">    
+                    <select class="form-control form-control-sm" id="filtro">
+                        <option disabled selected value>Filtrar</option>
+                        <option>Meus Grupos</option>
+                        <option>Exatas</option>
+                        <option>Humanas</option>
+                        <option>Biológicas</option>
+                    </select>  
                 </div>
-                <div class="pt-2">
-                <a href="{{action('GruposController@novo')}}" type="button" class=" fa fa-plus btn btn-sm" title="Novo Grupo"></a>
+                <div class="col-md pt-2" style="display:inline-block">
+                                    <a href="{{action('GruposController@novo')}}" type="button" class=" fa fa-plus btn btn-sm" title="Novo Grupo"></a>
                 </div>
-            </div>
             </div>
             
             <div class="row">
