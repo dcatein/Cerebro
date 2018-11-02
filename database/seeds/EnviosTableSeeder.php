@@ -17,7 +17,8 @@ class EnviosTableSeeder extends Seeder
             'tipo' => 0,
             'info' => 'Exercicio sobre geologia',
             'classificacao' => 4.2,
-            'created_at' => now()
+            'created_at' => now(),
+            'id_grupo' => 1020 
         ]);
 
         DB::table('envios')->insert([
@@ -26,7 +27,8 @@ class EnviosTableSeeder extends Seeder
             'tipo' => 0,
             'info' => 'Exercicio sobre algebra',
             'classificacao' => 3.8,
-            'created_at' => now()
+            'created_at' => now(),
+            'id_grupo' => 1020
         ]);
     }
 }

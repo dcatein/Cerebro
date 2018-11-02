@@ -15,7 +15,8 @@ class DatabaseSeeder extends Seeder
             UsuariosTableSeeder::class,
             EnviosTableSeeder::class,
             PalavrasChaveTableSeeder::class,
-            GruposTableSeeder::class
+            GruposTableSeeder::class,
+            ComentariosTableSeeder::class
             ]);
     }
 }
