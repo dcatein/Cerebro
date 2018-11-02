@@ -5,6 +5,8 @@ namespace cerebro\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Request;
 use cerebro\Grupos;
+use cerebro\Envios;
+use cerebro\Http\Controllers\EnviosController;
 
 class GruposController extends Controller{
     
@@ -20,7 +22,13 @@ class GruposController extends Controller{
         if (empty($reposta)){
             return 'Dado inexistente';
         }
-        return view('grupos/show')->with('grupo',$reposta);
+
+        $envios = $this->envios($id);
+
+        return view('grupos/show')->with('grupo',[
+            'grupo' => $reposta,
+            'envios' => $envios
+            ]);
     }
 
     public function novo(){
@@ -60,5 +68,10 @@ class GruposController extends Controller{
 
     public function findById($id){
         return Grupos::find($id);
+    }
+
+    public function envios($grupo){
+        $enviosController = new EnviosController();
+        return $enviosController->find($grupo);
     }
 }

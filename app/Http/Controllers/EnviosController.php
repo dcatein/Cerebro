@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\DB;
 use Request;
 use cerebro\Envios;
 use cerebro\Http\Controllers\PalavrasChaveController;
+use cerebro\Http\Controllers\ComentariosController;
 
 class EnviosController extends Controller{
 
@@ -14,24 +15,34 @@ class EnviosController extends Controller{
         return view('envios/index')->with('envios', $envios);
     }
 
-    public function find($id){
-        $reposta = Envios::find($id);
+    public function find($grupo){
+
+        $envios = Envios::where('id_grupo', $grupo)
+        ->orderBy('created_at', 'asc')
+        ->get();
+
+        // $reposta = Envios::find($id);
         
         $palavrasChave = new PalavrasChaveController();
-        $palavras = $palavrasChave->findByEnvio($reposta->id);
+        $comentariosController = new ComentariosController();
 
-        if (empty($reposta)){
-            return 'Dado inexistente';
-        }
-        return view('envios/show')->with('envio',['envio' => $reposta, 
-        'palavras' => $palavras]);
+        foreach($envios as $envio){
+            $envio['palavras'] = $palavrasChave->findByEnvio($envio->id);
+            $envio['comentarios'] = $comentariosController->findAll($envio->id);
+        }        
+        // $palavras = $palavrasChave->findByEnvio($reposta->id);
+
+        
+        // $comentarios = $comentariosController->findAll($id);
+
+        return $envios;
     }
 
     public function novo(){
         return view('envios.form_new');
     }
 
-    public function insert(){
+    public function insert(){ 
         $retorno = Envios::create(Request::all());
         $this->salvarPalavras(Request::input('palavrasChave'),$retorno->id);
 

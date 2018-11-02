@@ -20,6 +20,7 @@ class CreateEnviosTable extends Migration
             $table->integer('tipo');
             $table->text('info');
             $table->float('classificacao')->nullable();
+            $table->integer('id_grupo');
         });
 
         Schema::create('palavrasChave', function (Blueprint $table){

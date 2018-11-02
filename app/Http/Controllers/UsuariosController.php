@@ -73,4 +73,10 @@ class UsuariosController extends Controller{
 
         return $reposta;
     }
+
+    public function findUsuarioNome($id){
+        $resposta = Usuarios::find($id);
+
+        return $resposta->nome;
+    }
 }
