@@ -5,6 +5,9 @@
 	//Index
 Route::get('/index', 'IndexController@index');
 
+//plano de estudos
+Route::get('/plano', 'PlanosController@index');
+
     // Usuarios
 Route::get('/usuarios', 'UsuariosController@index');
 Route::get('/usuarios/show/{id}', 'UsuariosController@find');

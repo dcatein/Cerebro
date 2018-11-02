@@ -11,20 +11,13 @@
 
    <!-- <body style="background: url(https://cdn.pixabay.com/photo/2015/02/02/11/08/office-620817_960_720.jpg)"> -->
    <body>
-    <div class='container'>
+    <div class='container-fluid'>
       @include('layout.partials.nav')
-
-      @include('layout.partials.header')
-
-
-    @include('layout.partials.footer')
-    @include('layout.partials.footer-scripts')
 
       @yield('content')
 
-      @include('layout.partials.footer')
-
     </div>
+    <script src="/js/script.js" ></script>
 
    </body>
 

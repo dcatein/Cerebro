@@ -13,6 +13,7 @@ class GruposController extends Controller{
         return view('grupos.index')->with('grupos', $grupos);
     }
 
+
     public function find($id){
         $reposta = Grupos::find($id);
         
