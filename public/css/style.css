@@ -132,9 +132,8 @@ body .carousel-control-next-icon{
   border:1px solid #fff;
   border-radius: 8px;
 }
-.container-comentario{
+.container-postagem{
   margin: 10px;
-  border:1px solid #fff;
   border-radius: 2px;
   position: relative;
 }
@@ -157,15 +156,42 @@ body .carousel-control-next-icon{
   font-size: 35px;
 }
 
-.img-perfil-post img{
- width: 50%;
-  height: 50%;
+.perfil-post img,#lbl-name{
   overflow: auto;
   margin: auto;
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
   border-radius: 7px;
+  text-align: center;
+  font-size: 12px;
+  color: #708090;
 }
+.perfil-post p{border-right: 1px solid #fff;}
+
+.postagem-group h5{
+  border-bottom: 1px ridge #fff;  
+  color: #708090;
+  margin-bottom: 0;
+}
+.postagem-group #data-hora{
+  font-size: 10px;
+  color: gray;
+}
+.postagem-group #conteudo{
+  color:#838B8B;
+}
+.postagem-group #keywords{
+  top:0;
+  font-size: 10px;
+  color:#838B8B;
+}
+.postagem-group{
+
+}
+  
+.content-comentario #name{font-size: 13px;font-weight: bold;}
+.content-comentario #content{font-size: 15px;}
+.footer-comentario {border-top:1px solid #fff;font-size: 10px;color: gray; text-align: right;}
 /***********************  GRUPOS ********************/
 
 /***********************  PLANOS DE ESTUDO ********************/
@@ -173,3 +199,16 @@ body .carousel-control-next-icon{
 #tblPlano tr th{border:1px solid #000;}
 #tblPlano tr:hover th,.header{background-color: rgba(0,0,0,0.6);color:white;border:1px solid #000;}
 /***********************  PLANOS DE ESTUDO ********************/
+
+/***********************  MOBILE ********************/
+@media only screen and (max-width: 1023px) {
+
+#lbl-convide{
+  display: none;
+}
+#lbl-config{
+  display: none;
+}
+
+}
+/***********************  MOBILE ********************/

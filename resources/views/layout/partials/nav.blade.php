@@ -6,11 +6,11 @@
                          
           <ul class="list-sidebar bg-defoult">
 
-            <li><a href="{{action('IndexController@index')}}" title="Home" class="button-left"><i class="fa fa-diamond"></i> <span class="nav-label">Cerebro</span>
+            <li><a href="{{action('IndexController@index')}}" title="Home" class="button-left"><!--i class="fa fa-diamond"></i--><img src="/img/logo.png" width="20" height="20" class="mr-2" /> <span class="nav-label">Cerebro</span>
             </a> </li>
               <li> <a href="#" class="button-left" title=""> <i class="fa fa-user-circle"></i> <span class="nav-label"> Perfil </span> </a>
             </li>
-            <li> <a href="{{action('GruposController@index')}}" title="Grupos de Estudo" class="button-left" ><i class="fa fa-diamond"></i> <span class="nav-label">Grupos</span></a> </li>
+            <li> <a href="{{action('GruposController@index')}}" title="Grupos de Estudo" class="button-left" ><i class="fa fa-group"></i> <span class="nav-label">Grupos</span></a> </li>
             <li> <a href="#" class="button-left"><i class="fa fa-heart"></i> <span class="nav-label">Favorito</span></a> </li>             
             <li> <a href="{{action('PlanosController@index')}}" class="button-left"><i class="fa fa-calendar"></i> <span class="nav-label">Plano de Estudo</span> </a></li>
             <li> <a href="#" class="button-left"><i class="fa fa-flash"></i> <span class="nav-label">Destaque</span></a> </li>
