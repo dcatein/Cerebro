@@ -53,7 +53,9 @@
                     <div class="container-group my-4 py-2 px-2"><!-- escrever comentarios-->  
                         <div class="row">
                             <div class="col-md-11">
-                                <textarea></textarea> 
+                                <input type="text" name="assunto" placeholder="Assunto" class="form-control form-control-sm mb-1" />
+                                <textarea placeholder="Conteúdo da sua postagem" class="mb-1"></textarea>
+                                <input type="text" name="keyword" placeholder="Palavras-chave separadas por vírgula" class="form-control form-control-sm" /> 
                             </div>
                             <div class="col-md pt-3">
                                 <a href="#" type="button" class="btn btn-sm fa fa-paper-plane" title="Enviar"></a>
@@ -61,7 +63,7 @@
                         </div>
                     </div><!-- escrever comentarios-->
 
-                    <div class="container-group">
+                    <!--div class="container-group">
                         @foreach ($grupo['envios'] as $envio)
                             <p>{{$envio->assunto}}</p>
                             <p>{{$envio->info}}</p>
@@ -79,21 +81,69 @@
                             @endforeach
                             ------------//---------------
                         @endforeach
-                    </div>
+                    </div-->
 
-
-                   <div class=" container-group"><!--comentarios-->
+                    @foreach ($grupo['envios'] as $envio)
+                   <div class=" container-group mb-2"><!--postagem-->
                         <div class="container-comentario">
                             <div class="row">
-                                <div class="col-md-2">
-                                     foto 
-                                 </div>
+                                <div class="col-md-2"><!--img do usuario da postagem-->
+                                    <div class="img-perfil-post">
+                                        <img src="/img/user-pic-exemple.jpg"/> 
+                                    </div>
+                                </div><!--img do usuario da postagem-->
                                 <div class="col-md-10">
-                                     comentario
-                                 </div>                     
-                            </div>                                                        
+                                     <div class="row"><!--conteudo da postagem-->
+                                        <div class="col-md-12">
+                                             <div class="row"><!--assunto da postagem-->
+                                                <div class="col-md-12">
+                                                    <div class="postagem-group">
+                                                         {{$envio->assunto}}
+                                                   </div>
+                                                </div>
+                                            </div>
+                                            <div class="row"><!--conteudo da postagem-->
+                                                <div class="col-md-12">
+                                                    <div class="postagem-group">
+                                                         {{$envio->info}}
+                                                   </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                     </div><!--conteudo da postagem-->
+                                     
+                                     <div class="row"><!--footer da postagem-->
+                                        <div class="col-md-12">
+                                            <div class="postagem-footer-group">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="">
+                                                            @foreach($envio->palavras as $palavra)
+                                                                {{$palavra['palavra']}},
+                                                            @endforeach
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="">
+                                                            <p>{{$envio->created_at}}</p>
+                                                        </div>
+
+                                                    </div>
+                                                 </div>
+                                            </div>
+                                        </div>
+                                    </div><!--footer da postagem-->
+
+                                </div>                     
+                            </div>   
                         </div>                                                        
-                   </div><!--comentarios-->
+                   </div><!--postagem-->
+                    @endforeach
+
+
                 </div>
                 <div class="col-md-0">
                     

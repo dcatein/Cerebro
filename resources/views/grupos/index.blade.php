@@ -14,14 +14,14 @@
                 <div class="col-md-3 pt-2" style="display:inline-block">
                     <input type="text"  class="form-control form-control-sm" placeholder=" Procuro o grupo ..." name="txt-busca">
                 </div>
-                <div class="col-md-3 pt-2" style="display:inline-block">
-                    <select class="form-control form-control-sm" id="filtro">
-                        <option disabled selected value>Filtrar</option>
-                        <option>Meus Grupos</option>
-                        <option>Exatas</option>
-                        <option>Humanas</option>
-                        <option>Biológicas</option>
-                    </select>  
+                <div class="col-md-3 pt-2" style="display:inline-block">                    
+                    <select class="custom-select" name="tipo">
+                        <option value='0' disabled selected value>Filtrar</option>
+                        <option value='1'>Meus Grupos</option>
+                        <option value='2'>Exatas</option>
+                        <option value='3'>Humanas</option>
+                        <option value='4'>Biológicas</option>
+                    </select>
                 </div>
                 <div class="col-md pt-2" style="display:inline-block">
                                     <a href="{{action('GruposController@novo')}}" type="button" class=" fa fa-plus btn btn-sm" title="Novo Grupo"></a>

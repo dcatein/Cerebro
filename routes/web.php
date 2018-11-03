@@ -3,7 +3,7 @@
 // Rotas GET
 
 	//Index
-Route::get('/index', 'IndexController@index');
+Route::get('/', 'IndexController@index');
 
 //plano de estudos
 Route::get('/plano', 'PlanosController@index');
@@ -26,6 +26,7 @@ Route::get('/envios/alterar/{id}', 'EnviosController@alterar');
 // Route::get('/grupos', function () {return view('grupo');});
 Route::get('/grupos', 'GruposController@index');
 Route::get('/grupos/show/{id}', 'GruposController@find');
+Route::get('/grupos/show/comentario/{id}', 'ComentariosController@find');
 Route::get('/grupos/novo', 'GruposController@novo');
 Route::get('/grupos/delete/{id}', 'GruposController@delete');
 Route::get('/grupos/alterar/{id}', 'GruposController@alterar');
