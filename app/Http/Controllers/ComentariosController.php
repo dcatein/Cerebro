@@ -16,7 +16,7 @@ class ComentariosController extends Controller{
     
     public function findAll($envio){
         $comentarios = Comentarios::where('id_envio', $envio)
-        ->orderBy('created_at', 'asc')
+        ->orderBy('created_at', 'desc')
         ->get();
 
         $usuariosController = new UsuariosController();
@@ -40,4 +40,17 @@ class ComentariosController extends Controller{
             ]);
     }
 
+
+    public function comentar($envio){
+        $envios = Envios::find($envio);
+        
+        $comentario = new Comentarios();
+        $comentario->texto = Request::input('texto');
+        $comentario->created_at = now();
+        $comentario->id_envio = $envios->id;
+        $comentario->id_usuario = Request::input('usuario');;
+        $comentario->save();
+
+        return redirect()->action('EnviosController@detalhes', ['envio' => $envios->id]);
+    }
 }

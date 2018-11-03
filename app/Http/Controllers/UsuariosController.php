@@ -19,7 +19,7 @@ class UsuariosController extends Controller{
         $reposta = $this->findUsuario($id);
 
         if(Request::input('conviteRespota')){
-            dd('aaa');
+            
         }
         
         if (empty($reposta)){
