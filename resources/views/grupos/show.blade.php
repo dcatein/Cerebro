@@ -52,37 +52,19 @@
                 <div class="col-md-8 ">
                     <div class="container-group my-4 py-2 px-2"><!-- escrever comentarios-->  
                         <div class="row">
-                            <div class="col-md-11">
+                            <form action="/envios/postar/{{$grupo['grupo']->id}}" method="post">
+                                <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
                                 <input type="text" name="assunto" placeholder="Assunto" class="form-control form-control-sm mb-1" />
-                                <textarea placeholder="Conteúdo da sua postagem" class="mb-1"></textarea>
-                                <input type="text" name="keyword" placeholder="Palavras-chave separadas por vírgula" class="form-control form-control-sm" /> 
-                            </div>
-                            <div class="col-md pt-3">
-                                <a href="#" type="button" class="btn btn-sm fa fa-paper-plane" title="Enviar"></a>
-                            </div>
+                                <textarea placeholder="Conteúdo da sua postagem" class="mb-1" name="info"></textarea>
+                                <input type="text" name="palavras" placeholder="Palavras-chave separadas por ponto e vírgula (;)" class="form-control form-control-sm" />
+                                <button class="btn btn-sm fa fa-paper-plane" type="Submit">Salvar</button>
+                            </form>
                         </div>
-                    </div><!-- escrever comentarios-->
+                    </div>
+                </div><!-- escrever comentarios-->
+            </div>
 
-                    <!--div class="container-group">
-                        @foreach ($grupo['envios'] as $envio)
-                            <p>{{$envio->assunto}}</p>
-                            <p>{{$envio->info}}</p>
-                            <p>{{$envio->created_at}}</p>
-                            
-                            <p>Palavras-chave:</p>
-                            @foreach($envio->palavras as $palavra)
-                                <p>{{$palavra['palavra']}}</p>
-                            @endforeach
-
-                            <p>Comentários:</p>
-                            @foreach($envio->comentarios as $comentario)
-                                <p>{{$comentario->usuario}}</p>
-                                <p>{{$comentario->texto}}</p>
-                            @endforeach
-                            ------------//---------------
-                        @endforeach
-                    </div-->
-
+                <div>
                     @foreach ($grupo['envios'] as $envio)
                    <div class=" container-group mb-2"><!--postagem-->
                         <div class="container-comentario">
@@ -130,7 +112,14 @@
                                                         <div class="">
                                                             <p>{{$envio->created_at}}</p>
                                                         </div>
-
+                                                    </div>
+                                                 </div>
+                                                 <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="">Comentários:
+                                                            <p>{{count($envio->comentarios)}}</p>
+                                                            <p><a href="{{action('EnviosController@detalhes',$envio->id)}}"> Ver mais...</a></p>
+                                                        </div>
                                                     </div>
                                                  </div>
                                             </div>

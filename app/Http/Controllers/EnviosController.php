@@ -18,7 +18,7 @@ class EnviosController extends Controller{
     public function find($grupo){
 
         $envios = Envios::where('id_grupo', $grupo)
-        ->orderBy('created_at', 'asc')
+        ->orderBy('created_at', 'desc')
         ->get();
 
         // $reposta = Envios::find($id);
@@ -74,5 +74,30 @@ class EnviosController extends Controller{
     public function salvarPalavras($palavras, $envio){
         $palavrasChave = new PalavrasChaveController();
         $palavrasChave->salvarPalavras($palavras, $envio);
+    }
+
+    public function detalhes($envio){
+        $envio = Envios::find($envio);
+        
+        $palavrasChave = new PalavrasChaveController();
+        $comentariosController = new ComentariosController();
+        $envio['palavras'] = $palavrasChave->findByEnvio($envio->id);
+        $envio['comentarios'] = $comentariosController->findAll($envio->id);
+        
+        return view('envios.show')->with('envio',$envio);    
+    }
+
+    public function postar($grupo){
+        $envio = new Envios();
+        $envio->assunto = Request::input('assunto');
+        $envio->info = Request::input('info');
+        $envio->created_at = now();
+        $envio->id_grupo = $grupo;
+        $envio->tipo = 0;
+        $envio->save();
+        $palavras = Request::input('palavras');
+        $this->salvarPalavras($palavras, $envio->id);
+
+        return redirect()->action('EnviosController@detalhes', ['envio' => $envio->id]);
     }
 }
