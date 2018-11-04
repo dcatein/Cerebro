@@ -82,7 +82,6 @@
                                                         <div class="row">
                                                             <div class="col-md-10">
                                                                 <a href="{{action('EnviosController@detalhes',$envio->id)}}" title="Ver postagem completa"><h5> {{$envio->assunto}}</h5></a>
-
                                                                 <p id="keywords">
                                                                     @foreach($envio->palavras as $palavra)
                                                                         {{$palavra['palavra']}},
@@ -111,19 +110,26 @@
                                             <div class="postagem-footer-group">
                                                  <div class="row">
                                                     <div class="col-md-12">
-                                                        <div class="">
-                                                            <a href="{{action('EnviosController@detalhes',$envio->id)}}" title="Ver comentários">
-                                                                @if(count($envio->comentarios) == 0)
-                                                                    Não há comentários
-                                                                @endif
-                                                                @if(count($envio->comentarios) > 1)
-                                                                    {{count($envio->comentarios)}} comentários
-                                                                @endif
-                                                                @if(count($envio->comentarios) == 1)
-                                                                    {{count($envio->comentarios)}} comentário
-                                                                @endif
-                                                             </a>
+                                                        <div class="row">
+                                                            <div class="col-md-8">
+                                                                <a href="{{action('EnviosController@detalhes',$envio->id)}}" title="Ver comentários">
+                                                                    @if(count($envio->comentarios) == 0)
+                                                                        Não há comentários
+                                                                    @endif
+                                                                    @if(count($envio->comentarios) > 1)
+                                                                        {{count($envio->comentarios)}} comentários
+                                                                    @endif
+                                                                    @if(count($envio->comentarios) == 1)
+                                                                        {{count($envio->comentarios)}} comentário
+                                                                    @endif
+                                                                 </a>
+                                                            </div>
+                                                            <div class="col-md" id="controls">
+                                                                <a href="" class="mr-1" id="btn-edit"><i class="fa fa-edit" id="btn-edit-ico"></i> Editar</a>
+                                                                <a href="" id="btn-close"><i class="fa fa-close" id="btn-close-ico" ></i> Excluir</a>
+                                                            </div>
                                                         </div>
+
                                                     </div>
                                                  </div>
                                             </div>

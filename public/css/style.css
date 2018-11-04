@@ -8,7 +8,7 @@ background: url(../img/back.jpg); background-position: center center; background
 
 /** ======================  base css ==============================**/
 
-a:hover{ text-decoration: none; }
+a:hover{text-decoration: none;color: gray;}
 .title{
 	color: #fff;
 	border-radius: 7px;
@@ -185,13 +185,31 @@ body .carousel-control-next-icon{
   font-size: 10px;
   color:#838B8B;
 }
-.postagem-group{
 
-}
-  
+.postagem-footer-group{font-size: 10px;}
+.postagem-footer-group a{color: #708090;}
+.postagem-footer-group #btn-close:hover{color: red;font-weight: bold;}
+.postagem-footer-group #btn-close-ico{color: red}
+
+.postagem-footer-group #btn-edit:hover{color: gray; font-weight: bold;}
+.postagem-footer-group #btn-edit-ico{color: gray}
+.postagem-footer-group #controls{text-align: right;}
+
+
+/*comentario*/
+
 .content-comentario #name{font-size: 13px;font-weight: bold;}
 .content-comentario #content{font-size: 15px;}
-.footer-comentario {border-top:1px solid #fff;font-size: 10px;color: gray; text-align: right;}
+
+.footer-comentario {border-top:1px solid #fff;font-size: 10px;color: gray;height: 13px;}
+.footer-comentario span{float: right;}
+.footer-comentario a{float: left;color: gray;}
+
+.footer-comentario #btn-close:hover{color: red;font-weight: bold}
+.footer-comentario #btn-close-ico{color: red}
+
+.footer-comentario #btn-edit:hover{color: gray; font-weight: bold;}
+.footer-comentario #btn-edit-ico{color: gray}
 /***********************  GRUPOS ********************/
 
 /***********************  PLANOS DE ESTUDO ********************/

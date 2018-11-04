@@ -77,7 +77,7 @@
             </div><!--subtitulo-->
             <div class="row">
                 <div class="col-md-10">
-                    <h6 class="title mt-2"> Comentários</h6>
+                    <h6 class="title mt-4"> Comentários</h6>
                     @foreach($envio['comentarios'] as $comentario)
                         <div class="container-group mt-2">
                             <div class="content-comentario">
@@ -85,8 +85,9 @@
                                 <span id="content">{{$comentario->texto}}</span>
                             </div>
                             <div class="footer-comentario">
+                                <a href="" class="mr-1" id="btn-edit"><i class="fa fa-edit" id="btn-edit-ico"></i> Editar</a>
+                                <a href="" id="btn-close"><i class="fa fa-close" id="btn-close-ico" ></i> Excluir</a>
                                 <span id="date">{{date('d/m/Y H:i:s',strtotime($comentario->created_at))}}</span>
-                                <i class="fa fa-close"></i>
                             </div>                            
                         </div>
                     @endforeach
