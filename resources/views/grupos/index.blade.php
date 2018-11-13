@@ -7,15 +7,16 @@
             <div class="row">
                 <div class="col-md-4 " style="display:inline-block">
                     <div>
-                        <h2 class="title">Grupos de Estudo</h2>                 
+                        <h2 style="color: #ffffff; background: linear-gradient(90deg, #5C258D, #4389A2);" class="text-center">Grupos de estudo</h2>                 
                     </div>
                 </div>
                 
-                <div class="col-md-3 pt-2" style="display:inline-block">
+                <div class="col-md-2 pt-2" style="display:inline-block">
                     <input type="text"  class="form-control form-control-sm" placeholder=" Procuro o grupo ..." name="txt-busca">
                 </div>
-                <div class="col-md-3 pt-2" style="display:inline-block">                    
-                    <select class="custom-select" name="tipo">
+                <button type="submit" class="btn btn-default" style="background-color: #4a6b9c; color: #ffffff; height: 32; margin-top: 7px">Pesquisar</button>
+                <div class="col-md-2 pt-2" style="display:inline-block; ">                    
+                    <select class="custom-select" name="tipo" style="height: 32">
                         <option value='0' disabled selected value>Filtrar</option>
                         <option value='1'>Meus Grupos</option>
                         <option value='2'>Exatas</option>
@@ -24,7 +25,7 @@
                     </select>
                 </div>
                 <div class="col-md pt-2" style="display:inline-block">
-                                    <a href="{{action('GruposController@novo')}}" type="button" class=" fa fa-plus btn btn-sm" title="Novo Grupo"></a>
+                                    <a href="{{action('GruposController@novo')}}" type="button" class=" fa fa-plus btn btn-sm"style="background-color: #4a9b75; color: #ffffff; margin-top: 4px" title="Novo Grupo"></a>
                 </div>
             </div>
             
