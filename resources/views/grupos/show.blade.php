@@ -9,7 +9,7 @@
                 <div class="col-md-8 " style="display:inline-block">
                     <div class="row"><!--titulo-->
                         <div class="col-md-12">
-                            <h2 class="title">{{$grupo['grupo']->nome}}</h2>
+                            <h2 style="color: #ffffff; background: linear-gradient(90deg, #5C258D, #4389A2);" class="text-center">{{$grupo['grupo']->nome}}</h2>
                         </div>
                     </div><!--titulo-->
                     <div class="row"><!--subtitulo-->
@@ -34,9 +34,10 @@
                                 <p class="icon-notify">4</p>
                             </div>
                         </div>
-                        <div class="col center">
+
+                        <div class="col-md center"">
                             <a href="{{action('GruposController@convidarUsuario',$grupo['grupo']->id)}}" title="Convide um amigo" class="fa fa-user-plus ">
-                                <p id="lbl-convide" class="icon-notify">Convide</p>
+                                <p class="icon-notify " >Convide</p>
                             </a>
                         </div>
                         <div class="col center" >
@@ -49,28 +50,60 @@
             </div><!--cabeçalho-->
             
             <div class="row"><!--corpo-->
-                <div class="col-md-8 ">
-                   
-                    <div class="container-group my-4 py-2 px-2"><!-- escrever comentarios-->  
-                        <div class="row">
-                            <form action="/envios/postar/{{$grupo['grupo']->id}}" method="post" class="col-md">
+
+                <div class="col-md-4">
+                    <div class="container-group my-2 py-2 px-2 center""><!-- escrever comentarios-->  
+                        <div class="row" ; >
+                            <form action="/envios/postar/{{$grupo['grupo']->id}}" method="post" >
+                                <div class="form-group ">
                                 <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
+                            </div>
+
+                            <div class="form-group ">
                                 <input type="text" name="assunto" placeholder="Assunto" class="form-control form-control-sm mb-1" />
-                                <textarea placeholder="Conteúdo da sua postagem" class="mb-1" name="info"></textarea>
+                            </div>
+
+                            <div class="form-group ">
+                                <textarea placeholder="Conteúdo da sua postagem" class="mb-1" cols="40" name="info"></textarea>
+                            </div>
+
+                            <div class="form-group"> 
+                            <label class="control-label" for="exampleInputFile"></label>     
+                             <input type="file" id="exampleInputFile"> 
+                            </div>
+
+                            <div class="form-group ">
                                 <input type="text" name="palavras" placeholder="Palavras-chave separadas por ponto e vírgula (;)" class="form-control form-control-sm" />
-                                <button class="btn btn-sm fa fa-paper-plane mt-2" type="Submit">Salvar</button>
+
+                            </div>
+
+                                <button type="submit" class="btn btn-default" style="background-color: #2e8f63; color: #ffffff">Salvar</button>
                             </form>
                         </div>
-                    </div><!-- escrever comentarios-->
-
+                    </div>
+                </div><!-- escrever comentarios-->
+            </div>
+<div class="col-md "><!--materiais-->
+                    <div class="row ">
+                        <div class="col-md-12">
+                        <h2 style="color: #ffffff; background: linear-gradient(90deg, #5C258D, #4389A2);" class="text-center">Materiais</h2>
+                       </div>            
+                    </div>
+                     <div class="row ">
+                        <div class="col-md-12">
+                            <div class="container-group"></div>
+                       </div>            
+                    </div>
+                </div><!--materiais-->
+                <div>
                     @foreach ($grupo['envios'] as $envio)
                     <div class=" container-group mb-2"><!--postagem-->
                         <div class="container-postagem">
                             <div class="row">
-                                <div class="col col-sm-3 col-md-2 "><!--img do usuario da postagem-->
-                                    <div class="perfil-post">
-                                        <img src="/img/user-pic-exemple.jpg" width="60" height="60" /> 
-                                        <p id="lbl-name">Nome</p>
+
+                                <div class="col-md-2" ><!--img do usuario da postagem-->
+                                    <div class="img-perfil-post">
+                                        <img src="/img/user-pic-exemple.jpg " height="100"/> 
                                     </div>
                                 </div><!--img do usuario da postagem-->
                                 <div class="col-8 col-sm-9 col-md-10 "><!--conteudo da postagem-->
@@ -150,18 +183,7 @@
                 <div class="col-md-0">
                     
                 </div>
-                <div class="col-md "><!--materiais-->
-                    <div class="row ">
-                        <div class="col-md-12">
-                        <h2 class="title">Materiais</h2>
-                       </div>            
-                    </div>
-                     <div class="row ">
-                        <div class="col-md-12">
-                            <div class="container-group"></div>
-                       </div>            
-                    </div>
-                </div><!--materiais-->
+                
     
             </div><!--corpo-->
                 
