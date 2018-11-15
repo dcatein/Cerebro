@@ -9,7 +9,7 @@
                 <div class="col-md-8 " style="display:inline-block">
                     <div class="row"><!--titulo-->
                         <div class="col-md-12">
-                            <h2 style="color: #ffffff; background: linear-gradient(90deg, #5C258D, #4389A2);" class="text-center">{{$grupo['grupo']->nome}}</h2>
+                            <h2 style="color: #ffffff; background: linear-gradient(90deg, #5C258D, #4389A2);" class="text-center">{{$grupo['grupo']->nome}} </h2>
                         </div>
                     </div><!--titulo-->
                     <div class="row"><!--subtitulo-->
@@ -49,7 +49,9 @@
             </div><!--cabeçalho-->
             
             <div class="row"><!--corpo-->
-                <div class="col-md-4">
+                <div class="col-md-3">
+</div>
+                <div class="col-md-6 gedf-main" >
                     <div class="container-group my-2 py-2 px-2 center""><!-- escrever comentarios-->  
                         <div class="row" ; >
                             <form action="/envios/postar/{{$grupo['grupo']->id}}" method="post" >
