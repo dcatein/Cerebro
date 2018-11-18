@@ -99,7 +99,7 @@
 
                         <div class="col-md-12">
 
-                        <h2 style="color: #ffffff; background: linear-gradient(90deg, #5C258D, #4389A2);" class="text-center">Materiais</h2>
+                        <h2 style="color: #ffffff; background: linear-gradient(90deg, #5C258D, #4389A2);" class="text-center">Postagens</h2>
                        </div>            
                     </div>
                      
@@ -173,7 +173,7 @@
                                                             <div class="col-md">
                                                                 <a href="{{action('EnviosController@detalhes',$envio->id)}}" title="Ver comentários">
                                                                     @if(count($envio->comentarios) == 0)
-                                                                        Não há comentários
+                                                                        Comentar
                                                                     @endif
                                                                     @if(count($envio->comentarios) > 1)
                                                                         {{count($envio->comentarios)}} comentários
