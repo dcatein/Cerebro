@@ -40,6 +40,7 @@
 
 
 <div class="container-fluid pt-2 px-5">
+    <div class="col-md-3">
 <div class="col-md " ><!--botao voltar-->
                    <a href="{{action('GruposController@find',$envio->id_grupo)}}" title="Voltar" class="btn fnt-white"><i class="mt-2 ml-5 fa fa-reply icon-size-15" style="color: #5b2b8f;"></i> Voltar</a>
                 </div><!--botao voltar-->
