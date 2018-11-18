@@ -9,7 +9,7 @@
 <title>Projeto Cerebro</title>
 
 <!-- Bootstrap CSS -->
-<link rel="icon" type="imagem/png" href="favicon.png" />
+<link rel="icon" type="imagem/png" href="img/logo.png" />
 
 <!--MENU-->
 <link href="/css/app.css" rel="stylesheet">
