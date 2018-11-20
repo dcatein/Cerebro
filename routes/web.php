@@ -2,8 +2,12 @@
 
 // Rotas GET
 
-	//Index
+    //Index
 Route::get('/', 'IndexController@index');
+Route::get('/index', 'IndexController@index');
+    //login
+Route::get('/login', 'LoginController@index');
+Route::get('/login/entrar', 'LoginController@entrar');
 
 //plano de estudos
 Route::get('/plano', 'PlanosController@index');
@@ -61,5 +65,7 @@ Route::post('/convites/insert/{grupo}', 'ConvitesController@insert');
 
     //Comentarios
 Route::post('/comentarios/comentar/{envio}', 'ComentariosController@comentar');
+
+//login
 
 //-----

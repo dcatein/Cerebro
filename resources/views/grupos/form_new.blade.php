@@ -20,6 +20,9 @@
                             <div class="form-group">
                                 <label>Nome</label>
                                 <input name="nome" class="form-control"/>
+                            
+                                <label>Descrição</label>
+                                <input name="descricao" class="form-control"/>
 
                                 <label>Categoria</label>
                                 <select class="form-control" id="exampleFormControlSelect1">
