@@ -39,6 +39,7 @@ class GruposController extends Controller{
         Grupos::create(Request::all());
         return redirect()->action('GruposController@index')
         ->withInput(Request::only('nome'));
+        
     }
 
     public function delete($id){
@@ -50,6 +51,7 @@ class GruposController extends Controller{
         Grupos::where('id',$id)
         ->update([
             'nome' => Request::input('nome'),
+            'descricao' => Request::input('descricao'),
             'classificacao' => Request::input('classificacao')
             ]);
 

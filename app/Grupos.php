@@ -11,6 +11,6 @@ class Grupos extends Model
 
     const CREATED_AT = 'creation_date';
     
-    protected $fillable = array('created_at','updated_at','nome','classificacao');
+    protected $fillable = array('created_at','updated_at','nome','descricao','classificacao');
     protected $guarded = ['id'];
 }
