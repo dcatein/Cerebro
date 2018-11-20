@@ -2,22 +2,11 @@
     @section('content')
 
 
-<div class="container-fluid pt-2 px-4">
-    <div class="row justify-content-end ">
-        <div class="col-md-12 pl-5" style="display:inline-block">   
-            <div class="row"><!--cabeçalho-->
+<div class="row" style="background: linear-gradient(90deg, #2b5876, #4e4376);"><!--cabeçalho-->
                 <div class="col-md-8 " style="display:inline-block">
-                    <div class="row"><!--titulo-->
-                        <div class="col-md-12">
-                            <h2 style="color: #ffffff; background: linear-gradient(90deg, #5C258D, #4389A2);" class="text-center">{{$grupo['grupo']->nome}}</h2>
-                        </div>
-                    </div><!--titulo-->
                     <div class="row"><!--subtitulo-->
                         <div class="col-md-12">
-                            <div class="sub-title">
-                                <p>categorias de interesse</p>
-                                <p>ultimo comentario as</p>
-                            </div>
+                            
                         </div>
                     </div><!--subtitulo-->
                 </div>
@@ -48,12 +37,30 @@
                     </div>
                 </div>
             </div><!--cabeçalho-->
+<div class="container-fluid md-7">
+
+
+    <div class="row justify-content-end ">
+        <div class="col-md-6 center" style="display:inline-block">   
             
             <div class="row"><!--corpo-->
 
-                <div class="col-md-4">
-                    <div class="container-group my-2 py-2 px-2 center""><!-- escrever comentarios-->  
-                        <div class="row" ; >
+                
+
+                <div class="col-md-12 mt-2">
+                    <h2 style="color: #ffffff; background: linear-gradient(90deg, #5C258D, #4389A2);" class="text-center">{{$grupo['grupo']->nome}}</h2>
+                    <div class="row" ; >
+                        <div class="card-body">
+                    <div class="container-group col-md-12""><!-- escrever comentarios-->  
+                        <div class="card gedf-card">
+    <div class="card-header " style="background-color: #4c4476;">
+        <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist ">
+            <li class="nav-item">
+                <a class="nav-link active" id="posts-tab" data-toggle="tab" href="#posts" role="tab" aria-controls="posts" aria-selected="true">Postagem</a>
+            </li>
+        </ul>
+    </div>
+    <div class="card-body border-danger">
                             <form action="/envios/postar/{{$grupo['grupo']->id}}" method="post" >
                                 <div class="form-group ">
                                 <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
@@ -81,31 +88,49 @@
                             </form>
                         </div>
                     </div>
+                        </div>
+                    </div>
+                    </div>
                 </div><!-- escrever comentarios-->
             </div>
+
 <div class="col-md "><!--materiais-->
-                    <div class="row ">
+                    <div class="row">
+
                         <div class="col-md-12">
-                        <h2 style="color: #ffffff; background: linear-gradient(90deg, #5C258D, #4389A2);" class="text-center">Materiais</h2>
+
+                        <h2 style="color: #ffffff; background: linear-gradient(90deg, #5C258D, #4389A2);" class="text-center">Postagens</h2>
                        </div>            
                     </div>
-                     <div class="row ">
-                        <div class="col-md-12">
-                            <div class="container-group"></div>
-                       </div>            
-                    </div>
+                     
                 </div><!--materiais-->
                 <div>
                     @foreach ($grupo['envios'] as $envio)
                     <div class=" container-group mb-2"><!--postagem-->
                         <div class="container-postagem">
-                            <div class="row">
+                            <div class="card-header  mw-100 mh-100">
+    <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="mr-2">
+                <img class="rounded-circle" width="45" src="/img/user-pic-exemple.jpg " alt="">
+            </div>
+            <div class="ml-2">
+                <div class="h5 m-0">@Usuário</div>
+                <div class="h7 text-muted">Administrador</div>
+            </div>
+            <div>
 
-                                <div class="col-md-2" ><!--img do usuario da postagem-->
-                                    <div class="img-perfil-post">
-                                        <img src="/img/user-pic-exemple.jpg " height="100"/> 
-                                    </div>
-                                </div><!--img do usuario da postagem-->
+             <img class="rounded-circle ml-3" width="30" src="/img/gold.png " alt="">   
+
+
+            </div>
+        </div>
+        <div>
+</div>
+    </div>
+</div>
+                            
+
                                 <div class="col-8 col-sm-9 col-md-10 "><!--conteudo da postagem-->
                                      <div class="row">
                                         <div class="col-md-12">
@@ -137,17 +162,18 @@
                                             </div>
                                         </div>
                                      </div>
-                                     
-                                     <div class="row"><!--footer da postagem-->
-                                        <div class="col-md-12">
+                                     </div> <!--conteudo da postagem-->
+                                    <div class="card-footer">
+                                     <!--footer da postagem-->
+                                        <div class="col-md">
                                             <div class="postagem-footer-group">
                                                  <div class="row">
-                                                    <div class="col-md-12">
+                                                    <div class="col-md">
                                                         <div class="row">
-                                                            <div class="col-md-8">
+                                                            <div class="col-md">
                                                                 <a href="{{action('EnviosController@detalhes',$envio->id)}}" title="Ver comentários">
                                                                     @if(count($envio->comentarios) == 0)
-                                                                        Não há comentários
+                                                                        Comentar
                                                                     @endif
                                                                     @if(count($envio->comentarios) > 1)
                                                                         {{count($envio->comentarios)}} comentários
@@ -157,8 +183,8 @@
                                                                     @endif
                                                                  </a>
                                                             </div>
-                                                            <div class="col-md" id="controls">
-                                                                <a href="" class="mr-1" id="btn-edit"><i class="fa fa-edit" id="btn-edit-ico"></i> Editar</a>
+                                                            <div class="" id="controls">
+                                                                <a href="" class="mr-1" id="btn-edit"><i class="fa fa-edit" id="btn-edit-ico" ></i> Editar</a>
                                                                 <a href="" id="btn-close"><i class="fa fa-close" id="btn-close-ico" ></i> Excluir</a>
                                                             </div>
                                                         </div>
@@ -167,10 +193,11 @@
                                                  </div>
                                             </div>
                                         </div>
-                                    </div><!--footer da postagem-->
+                                
+                                </div><!--footer da postagem-->
 
-                                </div> <!--conteudo da postagem-->                    
-                            </div>   
+                                                    
+                           
                         </div>                                                        
                    </div><!--postagem-->
                     @endforeach
