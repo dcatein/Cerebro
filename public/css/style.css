@@ -37,6 +37,7 @@ a:hover{ text-decoration: none; }
 }
 input{
 border-radius: 8px;
+width: 100%;
 }
 
 .center{
@@ -47,6 +48,12 @@ border-radius: 8px;
 
 .fnt-white{
   color: white;
+}
+.word-wrap{
+   word-wrap: break-word;
+}
+.min-w-30{
+  min-width: 30%;
 }
 /***    left menu ****/
 
@@ -138,6 +145,7 @@ body .carousel-control-next-icon{
   max-height: 145px;
   overflow: hidden;
 }
+.card{min-height: 201px;}
              
  /***********************  MEUS GRUPOS do INDEX  ********************/
 
@@ -188,7 +196,15 @@ body .carousel-control-next-icon{
 /***********************  GRUPOS ********************/
 
 /***********************  PLANOS DE ESTUDO ********************/
-#tblPlano tr{border:1px solid #000; text-align: center;}
-#tblPlano tr th{border:1px solid #000;}
-#tblPlano tr:hover th,.header{background-color: rgba(0,0,0,0.6);color:white;border:1px solid #000;}
+#tblPlano .header, .header:hover{background: linear-gradient(90deg, #5C258D, #4389A2 );color:white;}
+#tblPlano tr th{border-bottom: :1px solid #000; text-align: center;}
+#tblPlano tbody tr:hover th:first-child{background: linear-gradient(90deg, #5C258D, #4389A2 );}
+#tblPlano tbody tr:hover th{background-color: #f2f2f2;color:white;}
+#tblPlano tbody th:hover{border-right: 1px solid ; border-color: rgba(106,90,205,0.2);}
+#tblPlano a{text-decoration: none;color: #000}
+#tblPlano a:hover{text-decoration: none;color: gray;font-weight: bold;}
+#tblPlano .btn-remover a i{font-weight: bold;color: gray;font-size: 9px;}
+#tblPlano .btn-remover a:hover i{color: red; }
+
+
 /***********************  PLANOS DE ESTUDO ********************/
