@@ -5,7 +5,9 @@
     //Index
 Route::get('/', 'IndexController@index');
 Route::get('/index', 'IndexController@index');
-    //login
+    //perfil
+Route::get('/perfil', 'PerfilController@index');
+  //login
 Route::get('/login', 'LoginController@index');
 Route::get('/login/entrar', 'LoginController@entrar');
 
