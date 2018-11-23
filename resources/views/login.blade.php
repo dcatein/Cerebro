@@ -5,27 +5,27 @@
       <div class="col-md-12">
          <div class="row">
             <div class="col-md-12 ml-0 pr-0 pl-0">
-               <nav class="navbar navbar-expand-lg navbar-light bg-warning nav-login  pl-5 " >
-                  <button class="navbar-toggler border border-light" type="button" data-toggle="collapse" data-target="#navbarToggler214" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation"> 
+               <nav class="navbar navbar-expand-lg navbar-light bg-warning nav-login ml-md-0 mr-md-0 pl-md-0 pr-md-0 pl-md-5 " >
+                  <button class="navbar-toggler border border-ligh ml-5" type="button" data-toggle="collapse" data-target="#navbarToggler214" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation"> 
                   <span class="navbar-toggler-icon"></span> 
                   </button>
                   <img src="/img/logo-titulo.png" class="center d-block d-sm-block d-lg-none"> 
-                  <div class="collapse navbar-collapse mr-sm-5 ml-sm-5 pr-sm-5 pl-sm-5" id="navbarToggler214">
+                  <div class="collapse navbar-collapse ml-md-0 mr-md-0 pl-md-0 pr-md-0 mr-sm-5 ml-sm-5 pr-sm-5 pl-sm-5" id="navbarToggler214">
                      <a href="{{action('IndexController@index')}}" title="Home" ><img src="/img/logo-titulo.png" class="ml-5 d-none d-sm-none d-md-none d-lg-block"> </a>
-                     <ul class="navbar-nav mt-2 mt-lg-0 col-3 ml-5 mr-auto pr-5 pl-5"> </ul>
-                     
-                     <form action="/login/entrar" method="get">
+                     <div class="col-md-4 col-sm-0"></div>
+                     <form action="/login/entrar" method="get" class="form-inline w-100 pl-5 ">
                                                     <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
 
-                     <div class="form-group mr-3 "> 
+                     <div class="form-group "> 
                         <label for="formInput261">Email</label>                     
-                        <input type="text" name="email" class="form-control mr-3 " id="formInput261" placeholder="Digite seu email..."> 
+                        <input type="text" name="email" class="form-control-sm mr-3 " id="formInput261" placeholder="Digite seu email..."> 
                      </div>
-                     <div class="form-group mr-3"> 
+                     <div class="form-group "> 
                         <label for="formInput322">Senha</label>                     
-                        <input type="password" name="senha"  class="form-control" id="formInput322" placeholder="Digite sua senha..."> 
+                        <input type="password" name="senha"  class="form-control-sm" id="formInput322" placeholder="Digite sua senha..."> 
                      </div>
-                     <button class="btn-entrar-login btn mt-3 mr-5 border border-light text-white font-weight-bold" type="submit" >Entrar</button>
+
+                     <button class="btn-entrar-login btn mt-3 mr-5 ml-2 border border-light text-white font-weight-bold btn-sm" type="submit" >Entrar</button>
                   </form>
                   </div>
                </nav>
