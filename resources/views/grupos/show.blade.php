@@ -2,7 +2,6 @@
     @section('content')
 
 
-                        </div>
 <div class="row" style="background: linear-gradient(90deg, #2b5876, #4e4376);">
     <!--cabeçalho-->
     <div class="col-md-8 " style="display:inline-block">
