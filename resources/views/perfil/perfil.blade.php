@@ -15,7 +15,7 @@
          <div class="row">
             <div class="col-md-12">
                <div class="container-bc mt-4">
-                  <div class="card">
+                  <div class="card-perfil">
                      <div class="card-body">
                         <h1>Robson Nascimento <i class="fa fa-edit" title="Editar perfil"></i></h1>
                         <h5>25 anos | Rio de Janeiro </h5>
