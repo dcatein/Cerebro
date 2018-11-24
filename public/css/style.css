@@ -23,7 +23,7 @@ a:hover{ text-decoration: none; }
   background: linear-gradient(90deg, #5C258D, #4389A2 );
 
 }
-.title h2{
+.title h2,h4{
   /*color: #fff;
   border-radius: 7px;
   text-align: center;
