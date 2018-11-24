@@ -208,4 +208,6 @@
 </div>
 </div>
 @endsection
+@include('layout.partials.footer')
+
 <br></br>
