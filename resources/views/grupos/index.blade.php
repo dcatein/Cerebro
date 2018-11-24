@@ -8,26 +8,24 @@
                <h2 class="text-center">Grupos de estudo</h2>
             </div>
             <div class="col-md">
-               <div class="row">
-                  <div class="col-md-5 col-12 pt-2">
-                     <input type="text"  class="form-control form-control-sm" placeholder=" Procuro o grupo ..." name="txt-busca">
+               <form  action="/grupos/filtra" method="get">
+                  <div class="row">
+                     <div class="col-md-3 pt-2">
+                        <select class="custom-select" name="tipo_busca" placeholder="Filtrar" onselect="filtro()" style="height: 32">
+                           <option value='0'>Meus Grupos</option>
+                           <option value='1'>Exatas</option>
+                           <option value='2'>Humanas</option>
+                           <option value='3'>Biológicas</option>
+                        </select>
+                     </div>
+                     <div class="col-md">
+                        <button type="submit" class="btn btn-sm btn-light btn-pesquisa-grupo mt-2" >Pesquisar</button>
+                     </div>
+                     <div class="col-md pt-2">
+                        <a href="{{action('GruposController@novo')}}" type="button" class=" fa fa-plus btn btn-sm mt-1 btn-novo-grupo"  title="Novo Grupo"> Novo Grupo </a>
+                     </div>
                   </div>
-                  <div class="col-md-3 pt-2">
-                     <select class="custom-select" name="tipo" style="height: 32">
-                        <option value='0' disabled selected value>Filtrar</option>
-                        <option value='1'>Meus Grupos</option>
-                        <option value='2'>Exatas</option>
-                        <option value='3'>Humanas</option>
-                        <option value='4'>Biológicas</option>
-                     </select>
-                  </div>
-                  <div class="col-md">
-                     <button type="submit" class="btn btn-sm btn-light btn-pesquisa-grupo mt-2" >Pesquisar</button>
-                  </div>
-                  <div class="col-md pt-2">
-                     <a href="{{action('GruposController@novo')}}" type="button" class=" fa fa-plus btn btn-sm mt-1 btn-novo-grupo"  title="Novo Grupo"> Novo Grupo </a>
-                  </div>
-               </div>
+               </form>
             </div>
          </div>
          <div class="row pl-5 mt-2">

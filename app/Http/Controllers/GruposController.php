@@ -76,4 +76,25 @@ class GruposController extends Controller{
         $enviosController = new EnviosController();
         return $enviosController->find($grupo);
     }
+
+    public function filter(){
+        $tipo_busca = Request::input('tipo_busca');
+        
+        if($tipo_busca == 0){
+            $grupos = DB::table('grupos')
+                ->where('id',1020)
+                ->orWhere('id',1021)
+                ->get();
+
+                return view('grupos/index')->with('grupos',$grupos);
+        }
+        
+        $grupos = DB::table('grupos')
+            ->when($tipo_busca, function ($query, $tipo_busca) {
+                return $query->where('categoria', $tipo_busca);
+            })->get();
+            
+            // return redirect('/grupos')->with('grupos',$grupos);
+            return view('grupos/index')->with('grupos',$grupos);
+    }
 }

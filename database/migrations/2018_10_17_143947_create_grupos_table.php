@@ -18,6 +18,8 @@ class CreateGruposTable extends Migration
             $table->timestamps();
             $table->string('nome',200);
             $table->float('classificacao')->nullable();
+            $table->string('descricao', 200);
+            $table->integer('categoria')->comment('1 = Exatas; 2 = Humanas; 3 = Biológicas;');
         });
     }
 

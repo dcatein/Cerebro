@@ -18,7 +18,7 @@
                      <!-- The slideshow -->
                      <div class="carousel-inner no-padding  ">
                         <div class="carousel-item active">
-                           <a href="{{action('GruposController@find',1020)}}" title="Abrir grupo">
+                           <a href="{{action('GruposController@find',1024)}}" title="Abrir grupo">
                               <div>
                                  <img class="card-img-top" alt="Card image cap" src="/img/laravel.png" height=""> 
                                  <div class="card-body">
@@ -30,7 +30,7 @@
                            </a>
                         </div>
                         <div class="carousel-item ">
-                           <a href="{{action('GruposController@find',1021)}}" title="Abrir grupo">
+                           <a href="{{action('GruposController@find',1020)}}" title="Abrir grupo">
                               <div >
                                  <img class="card-img-top" alt="Card image cap" src="/img/matematica.jpg" height=""> 
                                  <div class="card-body">
@@ -72,7 +72,7 @@
                      <!-- The slideshow -->
                      <div class="carousel-inner no-padding  ">
                         <div class="carousel-item active">
-                           <a href="{{action('GruposController@find',1020)}}" title="Abrir grupo">
+                           <a href="{{action('GruposController@find',1022)}}" title="Abrir grupo">
                               <div class="card card-height">
                                  <div class="card-body">
                                     <h5 class="card-title title-card">Grupo de Literatura</h5>
