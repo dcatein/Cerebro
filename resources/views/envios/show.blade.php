@@ -38,26 +38,31 @@
         </a>
   -->
 
-
-<div class="container-fluid pt-2 px-5">
-    <div class="col-md-3">
-<div class="col-md " ><!--botao voltar-->
+<div class="row" style="background: linear-gradient(90deg, #2b5876, #4e4376);"><!--cabeçalho-->
+                <div class="col-md-8 " style="display:inline-block">
+                    <div class="row"><!--subtitulo-->
+                        <div class="col-md-12">
+                            
+                        </div>
+                    </div><!--subtitulo-->
+                </div>
+                <div class="col-md " ><!--botao voltar-->
                    <a href="{{action('GruposController@find',$envio->id_grupo)}}" title="Voltar" class="btn fnt-white"><i class="mt-2 ml-5 fa fa-reply icon-size-15" style="color: #5b2b8f;"></i> Voltar</a>
                 </div><!--botao voltar-->
 
 </div>
+
+
+
+
+
+<div class="container-fluid pt-2 px-5">
     <div class="row justify-content-end ">
         <div class="col-md-6 center" style="display:inline-block">  
 
             <div class="row">
-                <div class="col-md-12"><!--titulo-->
-                    <h2 style="color: #ffffff; background: linear-gradient(90deg, #5C258D, #4389A2);" class="text-center"> {{$envio->assunto}}</h2>
-                </div><!--titulo-->
-                
-            </div>
-            
-            <div class="row center"><!--conteudo postagem-->
                 <div class="col-md-12">
+                    <h2 style="color: #ffffff; background: linear-gradient(90deg, #5C258D, #4389A2);" class="text-center"> {{$envio->assunto}}</h2>
                     <div class="container-group mt-2">
                         <!--{{$envio->tipo}}-->
                         {{$envio->info}}
@@ -65,7 +70,15 @@
             
 
 
-                    </div>
+                    </div><!--titulo-->
+                </div><!--titulo-->
+                
+            </div>
+            
+            <div class="row center">
+                <!--conteudo postagem-->
+                <div class="col-md-12">
+
                 </div>
             </div><!--conteudo postagem-->
             <div class="row center"><!--subtitulo-->
@@ -95,10 +108,10 @@
                             </div>
                             </div>
                             
-                            <div class=footer-comentario mr-5">
-                                <a href="" class="mr-1" id="btn-edit"><i class="fa fa-edit" id="btn-edit-ico"></i> Editar</a>
-                                <a href="" id="btn-close"><i class="fa fa-close" id="btn-close-ico" ></i> Excluir</a>
-                                <span id="date">{{date('d/m/Y H:i:s',strtotime($comentario->created_at))}}</span>
+                            <div class="card-footer" style="background-color: #4c4476;">
+                                <a href="" class="mr-1 text-white" id="btn-edit"><i class="fa fa-edit" id="btn-edit-ico"></i> Editar</a>
+                                <a href="" class="text-white" id="btn-close"><i class="fa fa-close" id="btn-close-ico" ></i> Excluir</a>
+                                <span class="text-white ml-5 float-right" id="date">{{date('d/m/Y H:i:s',strtotime($comentario->created_at))}}</span>
                             </div>                            
                         </div>
                     @endforeach
