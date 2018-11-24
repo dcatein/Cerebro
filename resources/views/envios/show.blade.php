@@ -40,7 +40,7 @@
 
 <div class="row title pl-5">  
     <div class="col-md-10 ">
-        <h2 class="">Configurações</h2>
+        <h2 class="">Postagem</h2>
     </div>
     <div class="col-md">
         <a href="{{action('GruposController@find',$envio->id_grupo)}}" title="Voltar" class="btn fnt-white"><i class="mt-2 ml-5 fa fa-reply icon-size-15"></i> Voltar</a>
