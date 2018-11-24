@@ -67,11 +67,11 @@
                             </div>
 
                             <div class="form-group ">
-                                <input type="text" name="assunto" placeholder="Assunto" class="form-control form-control-sm mb-1" />
+                                <input type="text" name="assunto" placeholder="Assunto" class="form-control form-control-sm mb-1" required/>
                             </div>
 
                             <div class="form-group ">
-                                <textarea placeholder="Conteúdo da sua postagem" class="mb-1" cols="40" name="info"></textarea>
+                                <textarea placeholder="Conteúdo da sua postagem" class="mb-1" cols="40" name="info" required></textarea>
                             </div>
 
                             <div class="form-group"> 
@@ -80,7 +80,7 @@
                             </div>
 
                             <div class="form-group ">
-                                <input type="text" name="palavras" placeholder="Palavras-chave separadas por ponto e vírgula (;)" class="form-control form-control-sm" />
+                                <input type="text" name="palavras" placeholder="Palavras-chave separadas por ponto e vírgula (;)" required class="form-control form-control-sm" />
 
                             </div>
 
