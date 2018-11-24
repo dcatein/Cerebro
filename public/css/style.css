@@ -18,11 +18,24 @@ a:hover{ text-decoration: none; }
   border-bottom: 2px solid #fff;
   background: rgba(0,0,0,0.3);*/
   color: #ffffff; 
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-weight: bold;
   background: linear-gradient(90deg, #5C258D, #4389A2 );
+
+}
+.title h2{
+  /*color: #fff;
+  border-radius: 7px;
+  text-align: center;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  background: rgba(0,0,0,0.3);*/
+  color: #ffffff; 
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   font-weight: bold;
 
 }
+.title-card{color: #4388a2}
 .banner{
   margin-top: -20;height: 120px;margin-bottom: 10;
   background-image: url(../img/topo.jpg);
@@ -146,7 +159,7 @@ body .carousel-control-next-icon{
   max-height: 145px;
   overflow: hidden;
 }
-.card{min-height: 201px;}
+.card-height{min-height: 201px;}
              
  /***********************  MEUS GRUPOS do INDEX  ********************/
 
@@ -194,6 +207,13 @@ body .carousel-control-next-icon{
   top: 0; left: 0; bottom: 0; right: 0;
   border-radius: 7px;
 }
+.btn-pesquisa-grupo{height: 30px;}
+.btn-novo-grupo{color: #4f4b93;background-color: white;}
+.card-size{
+  height: 145px;
+  width:243px; 
+  overflow: hidden !important;
+}
 /***********************  GRUPOS ********************/
 
 /***********************  PLANOS DE ESTUDO ********************/
@@ -238,114 +258,6 @@ align-items: center}
 /***********************  LOGIN ********************/
 
 /***********************  PERFIL ********************/
-
-
-.profile-header text-center 
-{
-    position: relative;
-    display: table;
-    width: 100vw      ;
-    height: 300px;
-    padding-bottom: 3.2rem;
-    margin-bottom: 0;
-    text-align: center;
-    background-size: cover;
-    border: 10px;
-}
-
-.profile-header 
-{
-    background-image: url(/img/banner-perfil.jpg);
-    background-repeat:no-repeat; 
-    background-size: cover;
-    background-position: center ;
-    position:relative;
-    border-bottom: 2px solid #E4E2E1;
-    box-shadow: 5px 12px 25px #F0EDEC;
-    
-}
-.rounded-circle 
-{
-    margin: 20px;
-    width: 200px;
-    height: 200px;
-    background-position:  center;
-    box-shadow: 5px -2px 45px #F5F5F5;
-}
-
-.container-bc {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    text-align: center;
-    line-height: 1.5;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center
-} 
-
-.card 
-{
-    max-width:800px;
-    min-height: 200px;
-    line-height: 1.5;
-    text-align: center;
-    color: black;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    box-shadow: 5px 10px 18px #DCDCDC;
-}
-.card i {color: black;font-size: 20px;float: right;}
-.card i:hover{color: gray;cursor: pointer;}
-.card h1 
-{
-    margin: 0 auto;
-    font-weight:bold;
-    font-size: 30px;
-    letter-spacing: 4px;
-    font-weight: 100;
-}
-
-.card h5 
-{
-    margin: 4px auto; 
-    font-size: 18px;
-    letter-spacing: 3px;
-    font-weight: 100;
-}
-
-.card p 
-{
-    text-align: justify;
-    margin: 30px;
-}
-
-.social ul 
-{
-    margin: 10px;
-    padding-bottom: auto;
-    text-align: center;
-}
-
-.social li 
-{
-    display: inline-block;
-    margin: 6px;
-    list-style: none;
-}
-
-.social li a 
-{
-    color: black;
-    text-decoration: none;
-    font-size: 40px;
-    transition: all ease-in-out 250ms;
-}
-
-.social li a:hover 
-{
-    color: #778899;
-}
-
 
 /***********************  PERFIL ********************/
 

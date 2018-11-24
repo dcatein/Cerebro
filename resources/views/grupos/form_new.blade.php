@@ -2,18 +2,18 @@
     @section('content')
 <div class="container-fluid pt-2">
     <div class="row justify-content-end ">
-        <div class="col-md-12 pl-5" style="display:inline-block">   
-            <div class="row">
-                <div class="col-md-10">
-                    <h2 class="title">Novo Grupo</h2>
+        <div class="col-md-12 " style="display:inline-block">   
+            <div class="row title pl-5">
+                <div class="col-md-10 ">
+                    <h2 class="">Novo Grupo</h2>
                 </div>
                 <div class="col-md">
                    <a href="{{action('GruposController@index')}}" title="Voltar" class="btn fnt-white"><i class="mt-2 ml-5 fa fa-reply icon-size-15"></i> Voltar</a>
                 </div>
             </div>
-            <div class="row">
+            <div class="row pl-5">
                 <div class="col-md-12">
-                    <div class="container-group">
+                    <div class="container-group mt-3">
                         <form action="/grupos/insert" method="post">
                             <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
 
