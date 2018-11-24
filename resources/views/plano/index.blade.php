@@ -176,7 +176,7 @@
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-12 pl-5">
                         <div class="container-group center mb-2 mt-2  ">
-                            <form action="/planos/insert" method="post" class="min-w-30">
+                            <form action="" method="" class="min-w-30">
 
                                 <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
 
