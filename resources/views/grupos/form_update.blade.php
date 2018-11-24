@@ -52,6 +52,15 @@
                     </div>
                 </div>
             </div>
+            <div class="row mt-3">
+                <div class="col-md-12 pl-5 float-right ">
+                    <a href="{{action('GruposController@find',$grupo->id)}}" title="Participar do grupo" class="btn btn-sm btn-danger mr-2">Apagar Grupo
+                   </a>
+
+                    <a href="{{action('GruposController@find',$grupo->id)}}" title="Participar do grupo" class="btn btn-sm btn-danger  ">Sair do Grupo
+                   </a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
