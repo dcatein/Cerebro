@@ -71,7 +71,8 @@ width: 100%;
 }
 .footer-cerebro{
   bottom: 0;
-  position: absolute;
+  position:fixed;
+  z-index: 1;
   width: 100%;
   text-align: center;
 }
