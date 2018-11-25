@@ -38,6 +38,7 @@ Route::get('/grupos/novo', 'GruposController@novo');
 Route::get('/grupos/delete/{id}', 'GruposController@delete');
 Route::get('/grupos/alterar/{id}', 'GruposController@alterar');
 Route::get('grupos/convite/{id}','GruposController@convidarUsuario');
+Route::get('/grupos/filtra', 'GruposController@filter');
 
     //Convites
 Route::get('/convites/aceitarConvite/{id}', 'ConvitesController@aceitarConvite');
