@@ -23,7 +23,7 @@ a:hover{ text-decoration: none; }
   background: linear-gradient(90deg, #5C258D, #4389A2 );
 
 }
-.title h2{
+.title h2,h4{
   /*color: #fff;
   border-radius: 7px;
   text-align: center;
@@ -68,6 +68,13 @@ width: 100%;
 }
 .min-w-30{
   min-width: 30%;
+}
+.footer-cerebro{
+  bottom: 0;
+  position:fixed;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
 }
 /***    left menu ****/
 
@@ -214,6 +221,18 @@ body .carousel-control-next-icon{
   width:243px; 
   overflow: hidden !important;
 }
+.card-size i{color: white}
+.card-size .footer-card{
+  bottom: 0;
+  position: absolute;
+  background: rgba(67, 136, 162,0.7);
+  width: 100%;
+ }
+ .footer-card p {
+  font-weight: bold;
+  margin-right: 15px;
+  color: white;
+ }
 /***********************  GRUPOS ********************/
 
 /***********************  PLANOS DE ESTUDO ********************/
@@ -246,7 +265,7 @@ align-items: center}
   #div-cadastro{
     padding: 5px;
     }
-    .footer-login{
+  .footer-login{
     font-size: 12px;
     position: initial;
   }

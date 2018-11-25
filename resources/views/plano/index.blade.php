@@ -1,20 +1,20 @@
 @extends('layout.mainlayout')
 @section('content')
-<div class="container-fluid pt-2 ">
+<div class="container-fluid ">
    <div class="row justify-content-end ">
-      <div class="col-md-12 col-sm-12 col-12 pl-5" style="display:inline-block">
-         <div class="row">
-            <div class="col-md-12" style="display:inline-block">
+      <div class="col-md-12 col-sm-12 col-12 " >
+         <div class="row title">
+            <div class="col-md-12 pl-5" >
                <div>
-                  <h2 class="title">Plano de Estudo Semanal</h2>
+                  <h2 >Plano de Estudo Semanal</h2>
                </div>
             </div>
          </div>
          
          
          <div class="row">
-            <div class="col-md-12">
-               <div class="container-group center">
+            <div class="col-md-12 pl-5">
+               <div class="container-group center mt-2 ">
                   <table class="table-responsive" id="tblPlano">
                     <thead>
                         <tr class="header">
@@ -166,17 +166,17 @@
                      </tr>
                   </table>
                </div>
-                <div class="row">
-                    <div class="col-md-12  d-inline-block" >
-                        <div class="mt-3">
-                            <h4 class="center title">Inserir Novo Estudo</h4>
-                        </div>
+               </div>
+               </div>
+                <div class="row title mt-3">
+                    <div class="col-md-12   d-inline-block pl-5" >
+                            <h4 class="center">Inserir Novo Estudo</h4>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12 col-sm-12 col-12">
-                        <div class="container-group center mb-2 ">
-                            <form action="/planos/insert" method="post" class="min-w-30">
+                    <div class="col-md-12 col-sm-12 col-12 pl-5">
+                        <div class="container-group center mb-2 mt-2  ">
+                            <form action="" method="" class="min-w-30">
 
                                 <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
 

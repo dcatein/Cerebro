@@ -38,6 +38,7 @@
         </a>
   -->
 
+
 <div class="row" style="background: linear-gradient(90deg, #2b5876, #4e4376);"><!--cabeçalho-->
                 <div class="col-md-8 " style="display:inline-block">
                     <div class="row"><!--subtitulo-->
@@ -48,7 +49,7 @@
                 </div>
                 <div class="col-md " ><!--botao voltar-->
                    <a href="{{action('GruposController@find',$envio->id_grupo)}}" title="Voltar" class="btn fnt-white"><i class="mt-2 ml-5 fa fa-reply icon-size-15" style="color: #5b2b8f;"></i> Voltar</a>
-                </div><!--botao voltar-->
+                </div>botao voltar-->
 
 </div>
 
@@ -121,7 +122,7 @@
                         <form action="/comentarios/comentar/{{$envio->id}}" method="post">
                             <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
                             <div class="form-group">
-                                <input name="texto" class="form-control form-control-sm" placeholder="Escreva seu comentário" />
+                                <input name="texto" class="form-control form-control-sm" placeholder="Escreva seu comentário" required/>
                                 <input type="hidden" name="usuario" value=103 />
                             </div>
                             <button class="btn btn-primary btn-sm" type="Submit">Enviar</button>

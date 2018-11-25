@@ -59,7 +59,7 @@
             </div>
          </div>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-3 mb-5">
          <div class="row">
             <div class="col-md-12">
                <h4 class="text-center title">Meus Grupos de Estudo</h4>
@@ -208,4 +208,6 @@
 </div>
 </div>
 @endsection
+@include('layout.partials.footer')
+
 <br></br>
