@@ -38,7 +38,6 @@
         </a>
   -->
 
-
 <div class="row" style="background: linear-gradient(90deg, #2b5876, #4e4376);"><!--cabeçalho-->
                 <div class="col-md-8 " style="display:inline-block">
                     <div class="row"><!--subtitulo-->
@@ -49,7 +48,7 @@
                 </div>
                 <div class="col-md " ><!--botao voltar-->
                    <a href="{{action('GruposController@find',$envio->id_grupo)}}" title="Voltar" class="btn fnt-white"><i class="mt-2 ml-5 fa fa-reply icon-size-15" style="color: #5b2b8f;"></i> Voltar</a>
-                </div>botao voltar-->
+                </div><!--botao voltar-->
 
 </div>
 
@@ -112,7 +111,7 @@
                             <div class="card-footer" style="background-color: #4c4476;">
                                 <a href="" class="mr-1 text-white" id="btn-edit"><i class="fa fa-edit" id="btn-edit-ico"></i> Editar</a>
                                 <a href="" class="text-white" id="btn-close"><i class="fa fa-close" id="btn-close-ico" ></i> Excluir</a>
-                                <span class="text-white ml-5 float-right" id="date">{{date('d/m/Y H:i:s',strtotime($comentario->created_at))}}</span>
+                                <span id="date" class="text-white float-right">{{date('d/m/Y H:i:s',strtotime($comentario->created_at))}}</span>
                             </div>                            
                         </div>
                     @endforeach
@@ -122,7 +121,7 @@
                         <form action="/comentarios/comentar/{{$envio->id}}" method="post">
                             <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
                             <div class="form-group">
-                                <input name="texto" class="form-control form-control-sm" placeholder="Escreva seu comentário" required/>
+                                <input name="texto" class="form-control form-control-sm" placeholder="Escreva seu comentário" />
                                 <input type="hidden" name="usuario" value=103 />
                             </div>
                             <button class="btn btn-primary btn-sm" type="Submit">Enviar</button>

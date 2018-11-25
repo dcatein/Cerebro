@@ -94,17 +94,9 @@
                 </div><!-- escrever comentarios-->
             </div>
 
-<div class="col-md "><!--materiais-->
-                    <div class="row">
 
-                        <div class="col-md-12">
-
-                        <h2 style="color: #ffffff; background: linear-gradient(90deg, #5C258D, #4389A2);" class="text-center">Postagens</h2>
-                       </div>            
-                    </div>
-                     
-                </div><!--materiais-->
                 <div>
+                   <h2 style="color: #ffffff; background: linear-gradient(90deg, #5C258D, #4389A2);" class="text-center">Postagens</h2> 
                     @foreach ($grupo['envios'] as $envio)
                     <div class=" container-group mb-2"><!--postagem-->
                         <div class="container-postagem">
@@ -163,15 +155,20 @@
                                         </div>
                                      </div>
                                      </div> <!--conteudo da postagem-->
-                                    <div class="card-footer">
+                                                                        <div class="card-footer" style="background-color: #4c4476;">
+
                                      <!--footer da postagem-->
                                         <div class="col-md">
                                             <div class="postagem-footer-group">
                                                  <div class="row">
+                                                                                                                <a href="" title="Like" class="card-link fa btn btn-sm mt-0 text-white border-success border"> <img src="/img/like.png" width="19" height="15"/> </i></a>
+                                                            <a href="" title="Deslike" class="card-link fa btn btn-sm mt-0 text-white border border-danger "> <img src="/img/deslike.png" width="19" height="15"/> </i></a>
+
+
                                                     <div class="col-md">
                                                         <div class="row">
                                                             <div class="col-md">
-                                                                <a href="{{action('EnviosController@detalhes',$envio->id)}}" title="Ver comentários">
+                                                                <a href="{{action('EnviosController@detalhes',$envio->id)}}" title="Ver comentários" class="text-white">
                                                                     @if(count($envio->comentarios) == 0)
                                                                         Comentar
                                                                     @endif
@@ -184,8 +181,8 @@
                                                                  </a>
                                                             </div>
                                                             <div class="" id="controls">
-                                                                <a href="" class="mr-1" id="btn-edit"><i class="fa fa-edit" id="btn-edit-ico" ></i> Editar</a>
-                                                                <a href="" id="btn-close"><i class="fa fa-close" id="btn-close-ico" ></i> Excluir</a>
+                                                                <a href="" class="mr-1 text-white" id="btn-edit "><i class="fa fa-edit" id="btn-edit-ico" ></i> Editar</a>
+                                                                <a href="" class="fa fa-close text-white" id="btn-close"><i id="btn-close-ico" ></i> Excluir</a>
                                                             </div>
                                                         </div>
 
