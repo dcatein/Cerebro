@@ -38,6 +38,8 @@
         </div>
     </div>
 </div>
+@include('layout.partials.footer')
+
   @endsection
     <b></b>
 

@@ -233,6 +233,8 @@ body .carousel-control-next-icon{
   margin-right: 15px;
   color: white;
  }
+ #btn-like:hover{background-color: green;}
+ #btn-deslike:hover{background-color: #ff7575;}
 /***********************  GRUPOS ********************/
 
 /***********************  PLANOS DE ESTUDO ********************/
