@@ -1,6 +1,6 @@
 @extends('layout.mainlayout')
     @section('content')
-<div class="container-fluid pt-2">
+<div class="container-fluid">
     <div class="row justify-content-end ">
         <div class="col-md-12 " style="display:inline-block">   
             <div class="row title pl-5">
@@ -40,6 +40,6 @@
         </div>
     </div>
 </div>
-
+    @include('layout.partials.footer')
    @endsection
-    <b></b>
+<b></b>

@@ -91,7 +91,7 @@
                                  <div class="card-body">
                                     <h5 class="card-title title-card">{{$grupo->nome}}</h5>
                                     <div class="word-wrap">
-                                       <p class="card-text ">Não estou conseguindo resolver essa questão de {{$grupo->nome}}, me ajudem por favor!</p>
+                                       <p class="card-text ">{{$grupo->descricao}}</p>
                                     </div>
                                     <small class="text-muted float-right">Ler mais...</small>
                                  </div>
@@ -137,7 +137,7 @@
                                  <div class="card-body">
                                     <h5 class="card-title title-card">{{$grupo->nome}}</h5>
                                     <div class="word-wrap">
-                                        <p class="card-text">Não estou conseguindo resolver essa questão de {{$grupo->nome}}, me ajudem por favor!.</p>
+                                        <p class="card-text">{{$grupo->descricao}}</p>
                                     </div>
                                     <small class="text-muted float-right">Ler mais...</small>
                                  </div>
@@ -183,7 +183,7 @@
                                  <div class="card-body">
                                     <h5 class="card-title title-card">{{$grupo->nome}}</h5>
                                     <div class="word-wrap">
-                                       <p class="card-text">Não estou conseguindo resolver essa questão de {{$grupo->nome}}, me ajudem por favor!.</p>
+                                       <p class="card-text">{{$grupo->descricao}}</p>
                                     </div>
                                     <small class="text-muted float-right">Ler mais...</small>
                                  </div>

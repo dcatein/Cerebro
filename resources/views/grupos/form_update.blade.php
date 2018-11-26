@@ -65,4 +65,5 @@
     </div>
 </div>
 @endsection
+@include('layout.partials.footer')
 <b></b>

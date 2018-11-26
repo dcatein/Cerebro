@@ -47,7 +47,7 @@
                     </div><!--subtitulo-->
                 </div>
                 <div class="col-md " ><!--botao voltar-->
-                   <a href="{{action('GruposController@find',$envio->id_grupo)}}" title="Voltar" class="btn fnt-white"><i class="mt-2 ml-5 fa fa-reply icon-size-15" style="color: #5b2b8f;"></i> Voltar</a>
+                   <a href="{{action('GruposController@find',$envio->id_grupo)}}" title="Voltar" class="btn fnt-white"><i class="mt-2 ml-5 fa fa-reply icon-size-15"></i> Voltar</a>
                 </div><!--botao voltar-->
 
 </div>
@@ -138,6 +138,7 @@
     </div>
 </div>
 
+@include('layout.partials.footer')
     
 @endsection
 <b></b>
