@@ -108,7 +108,6 @@
                               <img class="rounded-circle ml-3" width="30" src="/img/gold.png " alt="">   
                            </div>
                                
-                        </div>
                         <div>
                             <p id="data-hora " class="float-right mr-3"><small>{{ date('d/m/Y H:i:s',  strtotime($envio->created_at))}}</small></p>
 <p></p>
@@ -118,6 +117,7 @@
                                        @if(count($envio->comentarios) == 1)
                                        <small>{{count($envio->comentarios)}} comentário</small>
                                        @endif
+                        </div>
                         </div>
                   </div>
                   <div class="col-8 col-sm-9 col-md-10 ">
