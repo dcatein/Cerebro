@@ -95,27 +95,27 @@
                <!--postagem-->
                <div class="container-postagem">
                   <div class="card-header  mw-100 mh-100">
-                     <div class="d-flex justify-content-between align-items-center">
+                     <div class="d-flex">
 
                            <div class="mr-2">
                               <img class="rounded-circle" width="45" src="/img/user-pic-exemple.jpg " alt="">
                            </div>
                            <div class="ml-2">
-                              <div class="h5 m-0">@Usuário</div>
-                              <div class="h7 text-muted">Administrador</div>
+                              <div class="">@Usuário</div>
+                              <div class="text-muted">Administrador</div>
                            </div>
                            <div>
                               <img class="rounded-circle ml-3" width="30" src="/img/gold.png " alt="">   
                            </div>
                                
                         <div>
-                            <p id="data-hora " class="float-right mr-3"><small>{{ date('d/m/Y H:i:s',  strtotime($envio->created_at))}}</small></p>
+                            <p id="data-hora " class="float-right ml-5"><small>{{ date('d/m/Y H:i:s',  strtotime($envio->created_at))}}</small></p>
 <p></p>
                                @if(count($envio->comentarios) > 1)
-                                       <small>{{count($envio->comentarios)}} comentários</small>
+                                       <small class="ml-5">{{count($envio->comentarios)}} comentários</small>
                                        @endif
                                        @if(count($envio->comentarios) == 1)
-                                       <small>{{count($envio->comentarios)}} comentário</small>
+                                       <small >{{count($envio->comentarios)}} comentário</small>
                                        @endif
                         </div>
                         </div>
