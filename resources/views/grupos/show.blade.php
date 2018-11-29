@@ -178,7 +178,7 @@
                                     </div>
                                     <div class="" id="controls">
                                        <a href="" class="mr-1 text-white" id="btn-edit "><i class="fa fa-edit" id="btn-edit-ico" ></i> Editar</a>
-                                       <a href="" class="fa fa-close text-white" id="btn-close"><i id="btn-close-ico" ></i> Excluir</a>
+                                       <a href="{{action('EnviosController@delete',$envio->id)}}" class="fa fa-close text-white" id="btn-close"><i id="btn-close-ico" ></i> Excluir</a>
                                     </div>
                                  </div>
                               </div>

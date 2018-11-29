@@ -5,6 +5,7 @@ namespace cerebro\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Request;
 use cerebro\Envios;
+use cerebro\Grupos;
 use cerebro\Http\Controllers\PalavrasChaveController;
 use cerebro\Http\Controllers\ComentariosController;
 
@@ -51,8 +52,13 @@ class EnviosController extends Controller{
     }
 
     public function delete($id){
+        $envio = Envios::find($id);
+
         Envios::find($id)->delete();
-        return redirect()->action('EnviosController@index');
+
+        return redirect()->action('GruposController@find',$envio->id_grupo);
+
+
     }
 
     public function update($id){
