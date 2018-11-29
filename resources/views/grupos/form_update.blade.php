@@ -45,16 +45,16 @@
             <div class="row">
                 <div class="col-md-12 pl-5">
                     <div class="container-group mt-3">
-                        <h4>Componentes</h4>
+                        <h4 style="color: black">Componentes</h4>
                         <div>
-                            lista de componentes
+                            Lista de Componentes
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row mt-3">
                 <div class="col-md-12 pl-5 float-right ">
-                    <a href="{{action('GruposController@find',$grupo->id)}}" title="Participar do grupo" class="btn btn-sm btn-danger mr-2">Apagar Grupo
+                    <a href="{{action('GruposController@delete',$grupo->id)}}" title="Apagar do grupo" class="btn btn-sm btn-danger mr-2">Apagar Grupo
                    </a>
 
                     <a href="{{action('GruposController@find',$grupo->id)}}" title="Participar do grupo" class="btn btn-sm btn-danger  ">Sair do Grupo
@@ -64,6 +64,6 @@
         </div>
     </div>
 </div>
-@endsection
 @include('layout.partials.footer')
+@endsection
 <b></b>

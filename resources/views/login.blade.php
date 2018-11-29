@@ -17,8 +17,8 @@
                                                     <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
 
                      <div class="form-group "> 
-                        <label for="formInput261">Email</label>                     
-                        <input type="text" name="email" class="form-control-sm mr-3 " id="formInput261" placeholder="Digite seu email..."> 
+                        <label for="formInput261">E-mail</label>                     
+                        <input type="text" name="email" class="form-control-sm mr-3 " id="formInput261" placeholder="Digite seu e-mail..."> 
                      </div>
                      <div class="form-group "> 
                         <label for="formInput322">Senha</label>                     
@@ -34,7 +34,9 @@
          <div class="row mb-0">
             <div class="col-md-12  ">
                <div id="div-cadastro" class="center mt-2 pl-5 pr-5 pb-0">
-                  <form class="form-horizontal" >
+                  <form class="form-horizontal" action="/usuarios/insert" method="post">
+                     <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
+
                      <fieldset >
                         <legend class="font-weight-bold mb-3">Crie sua conta gratuita</legend>
                         <div class="form-group ">
@@ -62,7 +64,7 @@
                         </div>
                         <div class="form-group  center ">
                            <label class=" control-label" for="criar"></label>
-                           <button id="criar" name="criar" class="btn btn-primary border-light font-weight-bold btn-inscrever-login" >Inscrever-se</button>
+                           <button id="criar" name="criar" class="btn btn-primary border-light font-weight-bold btn-inscrever-login" type="submit" >Inscrever-se</button>
                         </div>
                      </fieldset>
                   </form>
