@@ -16,6 +16,7 @@
                            <option value='1'>Exatas</option>
                            <option value='2'>Humanas</option>
                            <option value='3'>Biológicas</option>
+                           <option value='4'>Todos</option>
                         </select>
                      </div>
                      <div class="col-md">

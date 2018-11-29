@@ -53,4 +53,12 @@ class ComentariosController extends Controller{
 
         return redirect()->action('EnviosController@detalhes', ['envio' => $envios->id]);
     }
+
+    public function delete($comentario){
+            $entity = Comentarios::find($comentario);
+            $envio_id = $entity->id_envio; 
+            $entity->delete();
+
+            return redirect()->action('EnviosController@detalhes', ['envio' => $envio_id]);
+    }
 }

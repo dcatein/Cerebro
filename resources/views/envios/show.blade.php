@@ -110,7 +110,7 @@
                             
                             <div class="card-footer" style="background-color: #4c4476;">
                                 <a href="" class="mr-1 text-white" id="btn-edit"><i class="fa fa-edit" id="btn-edit-ico"></i> Editar</a>
-                                <a href="" class="text-white" id="btn-close"><i class="fa fa-close" id="btn-close-ico" ></i> Excluir</a>
+                                <a href="{{action('ComentariosController@delete',$comentario->id)}}" class="text-white" id="btn-close"><i class="fa fa-close" id="btn-close-ico" ></i> Excluir</a>
                                 <span id="date" class="text-white float-right">{{date('d/m/Y H:i:s',strtotime($comentario->created_at))}}</span>
                             </div>                            
                         </div>

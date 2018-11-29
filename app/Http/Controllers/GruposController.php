@@ -88,6 +88,13 @@ class GruposController extends Controller{
 
                 return view('grupos/index')->with('grupos',$grupos);
         }
+
+        if($tipo_busca == 4){
+            $grupos = DB::table('grupos')
+                ->get();
+
+                return view('grupos/index')->with('grupos',$grupos);
+        }
         
         $grupos = DB::table('grupos')
             ->when($tipo_busca, function ($query, $tipo_busca) {

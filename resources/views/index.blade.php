@@ -18,11 +18,11 @@
                      <!-- The slideshow -->
                      <div class="carousel-inner no-padding  ">
                         <div class="carousel-item active">
-                           <a href="{{action('GruposController@find',1024)}}" title="Abrir grupo">
+                           <a href="{{action('GruposController@find',1028)}}" title="Abrir grupo">
                               <div>
-                                 <img class="card-img-top" alt="Card image cap" src="/img/laravel.png" height=""> 
+                                 <img class="card-img-top" alt="Card image cap" src="/img/hn.jpeg" height=""> 
                                  <div class="card-body">
-                                    <h5 class="card-title title-card">Criação de websites com laravel</h5>
+                                    <h5 class="card-title title-card">Dicas de aplicação das heurísticas de Nie</h5>
                                     <p class="card-text">9 postagens - 4 Integrantes</p>
                                     <p class="card-text"><small class="text-muted">Ler mais...</small></p>
                                  </div>
@@ -42,11 +42,11 @@
                            </a>
                         </div>
                         <div class="carousel-item ">
-                           <a href="{{action('GruposController@find',1022)}}" title="Abrir grupo">
+                           <a href="{{action('GruposController@find',1027)}}" title="Abrir grupo">
                               <div >
-                                 <img class="card-img-top" alt="Card image cap" src="/img/portugues.jpg" height=""> 
+                                 <img class="card-img-top" alt="Card image cap" src="/img/zf.png" height=""> 
                                  <div class="card-body">
-                                    <h5 class="card-title title-card">Orações coordenadas</h5>
+                                    <h5 class="card-title title-card">Zend Framework</h5>
                                     <p class="card-text">23 postagens - 6 integrantes </p>
                                     <p class="card-text"><small class="text-muted">Ler mais...</small></p>
                                  </div>

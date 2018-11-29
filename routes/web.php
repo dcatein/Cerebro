@@ -44,6 +44,11 @@ Route::get('/grupos/filtra', 'GruposController@filter');
 Route::get('/convites/aceitarConvite/{id}', 'ConvitesController@aceitarConvite');
 Route::get('/convites/recusarConvite/{id}', 'ConvitesController@recusarConvite');
     
+    //Comentarios
+Route::get('/comentarios/delete/{id}', 'ComentariosController@delete');
+
+
+
     //Grupos_Usuarios
 // Route::get('/grupos/usuarios/{id}', 'GruposController@cadastrarUsuario');
 //-----

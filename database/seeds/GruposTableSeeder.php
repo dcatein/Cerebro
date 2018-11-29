@@ -73,5 +73,24 @@ class GruposTableSeeder extends Seeder
             'created_at' => now(),
             'categoria' => 1
         ]);
+
+        DB::table('grupos')->insert([
+            'id' => 1027,
+            'nome' => 'Zend Framework',
+            'descricao' => 'Estudo sobre o framework zend',
+            'classificacao' => 4.8,
+            'created_at' => now(),
+            'categoria' => 1
+        ]);
+
+
+        DB::table('grupos')->insert([
+            'id' => 1028,
+            'nome' => 'Heurísticas de Nielsen',
+            'descricao' => 'Dicas para melhores interface',
+            'classificacao' => 4.1,
+            'created_at' => now(),
+            'categoria' => 1
+        ]);
     }
 }

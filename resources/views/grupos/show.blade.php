@@ -24,7 +24,7 @@
                <p class="icon-notify">4</p>
             </div>
          </div>
-         <div class="col-md col center"">
+         <div class="col-md col center">
             <a href="{{action('GruposController@convidarUsuario',$grupo['grupo']->id)}}" title="Convide um amigo" class="fa fa-user-plus ">
                <p class="icon-notify " >Convide</p>
             </a>
