@@ -115,7 +115,7 @@
                                        <small class="ml-5">{{count($envio->comentarios)}} comentários</small>
                                        @endif
                                        @if(count($envio->comentarios) == 1)
-                                       <small class="ml-5">{{count($envio->comentarios)}} comentário</small>
+                                       <small >{{count($envio->comentarios)}} comentário</small>
                                        @endif
                         </div>
                         </div>
