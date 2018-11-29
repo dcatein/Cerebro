@@ -95,7 +95,7 @@
             </div><!--subtitulo-->
             <div class="row">
                 <div class="col-md-12">
-                    <h6 class="title mt-3" style="color: #ffffff; background: linear-gradient(90deg, #5C258D, #4389A2);"> Comentários</h6>
+                    <h6 class="title mt-3 pl-2" style="color: #ffffff; background: linear-gradient(90deg, #5C258D, #4389A2);"> Comentários</h6>
                     @foreach($envio['comentarios'] as $comentario)
                         <div class="container-group mt-2">
                             <div class="content-comentario">
