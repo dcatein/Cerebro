@@ -7,6 +7,8 @@ use Request;
 use cerebro\Usuarios;
 use cerebro\Http\Requests\UsuariosRequest;
 use cerebro\Http\Controllers\ConvitesController;
+use cerebro\Grupos;
+
 
 class UsuariosController extends Controller{
     
@@ -34,8 +36,9 @@ class UsuariosController extends Controller{
 
     public function insert(UsuariosRequest $request){
         Usuarios::create($request->all());
-        return redirect()->action('UsuariosController@index')
-        ->withInput(Request::only('nome'));
+        $grupos = Grupos::all();
+        return redirect()->action('IndexController@index')->with('grupos', $grupos);    
+
     }
 
     public function delete($id){
